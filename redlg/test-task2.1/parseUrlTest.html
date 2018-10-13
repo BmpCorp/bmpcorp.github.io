@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Тестирование функции parseUrl</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mocha/5.2.0/mocha.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
+  <script type="text/javascript">
+    mocha.setup("bdd");
+    var assert = chai.assert;
+  </script>
+</head>
+<body>
+  <script type="text/javascript" src="parseUrl.js"></script>
+  <script type="text/javascript" src="tests.js"></script>
+  <div id="mocha"></div>
+  <script type="text/javascript">
+    mocha.checkLeaks();
+    mocha.run();
+  </script>
+  <p>Все объекты, получившиеся в первой группе тестов, выводятся в консоль.</p>
+  <p>Также Вы можете испытать функцию parseUrl из консоли.</p>
+</body>
+</html>

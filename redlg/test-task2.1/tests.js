@@ -11,7 +11,8 @@ describe("parseUrl", function() {
     "localhost",
     "consultant://192.168.0.100:999/sample%20document%20link/?params[]=2&params[]=#article2",
     "http://кириллический.домен.рф/Путь_к_файлу?Параметр=0#Метка",
-    "asdffds://top.l-e-v-e-l.domain.:443/path?param=#hash"
+    "asdffds://top.l-e-v-e-l.domain.:443/path?param=#hash",
+    "https://unpkg.com/@webcomponents/custom-elements"
   ];
 
   const expected = [
@@ -124,6 +125,16 @@ describe("parseUrl", function() {
       pathname: "/path",
       hash: "#hash",
       origin: "asdffds://top.l-e-v-e-l.domain.:443"
+    },
+    {
+      href: "https://unpkg.com/@webcomponents/custom-elements",
+      protocol: "https:",
+      hostname: "unpkg.com",
+      port: "",
+      host: "unpkg.com",
+      pathname: "/@webcomponents/custom-elements",
+      hash: "",
+      origin: "https://unpkg.com"
     }
   ];
 

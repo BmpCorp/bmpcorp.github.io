@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Пример реализации компонента</title>
+  <style type="text/css">
+    .user-data-grid__search-field {
+      width: 300px;
+    }
+
+    .user-data-grid__table {
+      margin: 10px 0;
+      border: 1px solid black;
+    }
+
+    .user-data-grid__column {
+      width: 180px;
+    }
+
+    .user-data-grid__id-column {
+      width: 50px;
+    }
+
+    .user-data-grid__header {
+      font-weight: bold;
+    }
+
+    .user-data-grid__header-cell {
+      padding: 5px;
+      border: 1px solid gray;
+    }
+
+    .user-data-grid__cell {
+      padding: 5px;
+      border: 1px solid lightgray;
+    }
+
+    .user-data-grid__info-area {
+      width: 500px;
+    }
+  </style>
+  <!-- Полифилл для пользовтаельских компонентов -->
+  <script src="https://unpkg.com/@webcomponents/custom-elements"></script>
+</head>
+<body>
+  <script type="text/javascript" src="UserDataGrid.js"></script>
+  <script type="text/javascript">
+    customElements.define("user-data-grid", UserDataGrid);
+    let grid = document.createElement("user-data-grid");
+    document.body.appendChild(grid);
+
+    grid.load("./data/usersShort.json");
+  </script>
+</body>
+</html>

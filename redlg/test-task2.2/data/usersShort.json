@@ -1,0 +1,30 @@
+[
+  {
+    "id": 100,
+    "firstName": "Вася",
+    "lastName": "Пупкин",
+    "email": "vasya.pupkin@gmail.com",
+    "phone": "8(831)848-21-43"
+  },
+  {
+    "id": 101,
+    "firstName": "Петя",
+    "lastName": "Иванов",
+    "email": "petya.ivanov@gmail.com",
+    "phone": "8(495)941-31-34"
+  },
+  {
+    "id": 102,
+    "firstName": "Иван",
+    "lastName": "Факов",
+    "email": "ivan.fakov@gmail.com",
+    "phone": "8(831)838-23-83"
+  },
+  {
+    "id": 103,
+    "firstName": "Костя",
+    "lastName": "Петров",
+    "email": "kostya.petrov@gmail.com",
+    "phone": "8(495)935-98-34"
+  }
+]

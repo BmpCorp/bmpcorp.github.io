@@ -8,7 +8,7 @@
       width: 300px;
     }
 
-    .user-data-grid__table {
+    .user-data-grid__table-wrapper {
       margin: 10px 0;
       border: 1px solid black;
     }
@@ -43,13 +43,21 @@
   <script src="https://unpkg.com/@webcomponents/custom-elements"></script>
 </head>
 <body>
+  <button id="load-short">Загрузить короткий список</button>
+  <button id="load-long">Загрузить длинный список</button>
   <script type="text/javascript" src="UserDataGrid.js"></script>
   <script type="text/javascript">
     customElements.define("user-data-grid", UserDataGrid);
-    let grid = document.createElement("user-data-grid");
+    let grid = new UserDataGrid(["id", "firstName", "lastName", "email", "phone"], 400);
     document.body.appendChild(grid);
 
-    grid.load("./data/usersShort.json");
+    document.getElementById("load-short").onclick = function() {
+      grid.load("./data/usersShort.json");
+    }
+
+    document.getElementById("load-long").onclick = function() {
+      grid.load("./data/usersLong.json");
+    }  
   </script>
 </body>
 </html>

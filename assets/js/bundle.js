@@ -10606,14 +10606,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.menuButtonClass = "nav-menu-button";
         this.menuClass = "nav-menu";
         this.submenuClass = "nav-submenu";
+        this.wrapperClass = "nav-menu-wrapper";
         this.submenuTitleClass = "nav-submenu__title";
-        this.submenuClassOpened = "nav-submenu--opened";
         this.submenuLinkClass = "nav-submenu-item__link";
+        this.menuOpenedClass = "nav-menu--opened";
+        this.submenuOpenedClass = "nav-submenu--opened";
         this.activeItemClass = "nav-submenu-item--active";
+        this.footerPrefix = "footer-";
 
         this.init = function () {
-            var menu = document.querySelector("." + _this.menuClass);
+            var path = window.location.pathname;
 
+            var menu = document.querySelector("." + _this.menuClass);
             if (menu) {
                 // Интерактивность меню.
                 var submenuTitles = menu.querySelectorAll("." + _this.submenuTitleClass);
@@ -10622,28 +10626,91 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 });
 
                 // Выделение активного пункта меню, если есть.
-                var path = window.location.pathname;
                 var activeMenuItem = menu.querySelector("." + _this.submenuLinkClass + "[href=\"" + path + "\"]");
                 if (activeMenuItem) {
                     activeMenuItem.classList.add(_this.activeItemClass);
-                    // Заодно открываем подменю, содержащее автивный пункт.
-                    _this.toggleMenu(activeMenuItem.closest("." + _this.submenuClass));
+                    // Заодно открываем подменю, содержащее активный пункт.
+                    _this.toggleSubmenu(activeMenuItem.closest("." + _this.submenuClass));
                 }
+
+                // Интерактивность кнопки меню.
+                var menuButton = document.querySelector("." + _this.menuButtonClass);
+                if (menuButton) {
+                    menuButton.addEventListener("click", _this.toggleMenu);
+                }
+
+                // Применяем правило для прокрутки фиксированного меню.
+                var scrollBarWidth = _this.getScrollbarWidth();
+                var menuWrapper = menu.querySelector("." + _this.wrapperClass);
+                menuWrapper.style.width = "calc(100% + " + scrollBarWidth + "px)";
             }
 
-            // Интерактивность кнопки меню.
-            var menuButton = document.querySelector("." + _this.menuButtonClass);
+            // Аналогичные действия производим для меню в нижней части страницы.
+            var footerMenu = document.querySelector("." + _this.footerPrefix + _this.menuClass);
+            if (menu) {
+                // Интерактивность меню.
+                var _submenuTitles = footerMenu.querySelectorAll("." + _this.footerPrefix + _this.submenuTitleClass);
+                _submenuTitles.forEach(function (submenuTitle) {
+                    submenuTitle.addEventListener("click", _this.footerSubmenuClicked);
+                });
 
-            if (menuButton) {}
+                // Выделение активного пункта меню, если есть.
+                var _activeMenuItem = footerMenu.querySelector("." + _this.footerPrefix + _this.submenuLinkClass + "[href=\"" + path + "\"]");
+                if (_activeMenuItem) {
+                    _activeMenuItem.classList.add(_this.footerPrefix + _this.activeItemClass);
+                    // Заодно открываем подменю, содержащее активный пункт.
+                    _this.toggleFooterSubmenu(_activeMenuItem.closest("." + _this.footerPrefix + _this.submenuClass));
+                }
+            }
+        };
+
+        this.toggleMenu = function () {
+            var menu = document.querySelector("." + _this.menuClass);
+            menu.classList.toggle(_this.menuOpenedClass);
         };
 
         this.submenuClicked = function (event) {
             var submenu = event.currentTarget.closest("." + _this.submenuClass);
-            _this.toggleMenu(submenu);
+            _this.toggleSubmenu(submenu);
         };
 
-        this.toggleMenu = function (submenu) {
-            submenu.classList.toggle(_this.submenuClassOpened);
+        this.toggleSubmenu = function (submenu) {
+            submenu.classList.toggle(_this.submenuOpenedClass);
+        };
+
+        this.footerSubmenuClicked = function (event) {
+            var submenu = event.currentTarget.closest("." + _this.footerPrefix + _this.submenuClass);
+            _this.toggleFooterSubmenu(submenu);
+        };
+
+        this.toggleFooterSubmenu = function (submenu) {
+            submenu.classList.toggle(_this.footerPrefix + _this.submenuOpenedClass);
+        };
+
+        this.getScrollbarWidth = function () {
+            // Создаём тестовый контейнер.
+            var outer = document.createElement("div");
+            outer.style.visibility = "hidden";
+            outer.style.width = "100px";
+            outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+            document.body.appendChild(outer);
+
+            // Измеряем ширину без скроллбара.
+            var widthNoScroll = outer.offsetWidth;
+
+            // Включаем скроллбар и создаём внутренний контейнер.
+            outer.style.overflow = "scroll";
+            var inner = document.createElement("div");
+            inner.style.width = "100%";
+            outer.appendChild(inner);
+
+            // Измеряем ширину со скроллбаром.
+            var widthWithScroll = inner.offsetWidth;
+
+            // Удаляем тестовые блоки и вычисляем ширину скроллбара.
+            outer.parentNode.removeChild(outer);
+            return widthNoScroll - widthWithScroll;
         };
     }
 
@@ -10707,7 +10774,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     slidesPerView: 6,
                     freeMode: true,
                     watchSlidesVisibility: true,
-                    watchSlidesProgress: true
+                    watchSlidesProgress: true,
+                    breakpoints: {
+                        599: {
+                            spaceBetween: 8,
+                            sliderPerView: "auto"
+                        }
+                    }
                 });
                 new __WEBPACK_IMPORTED_MODULE_0_swiper__["a" /* default */]("." + _this.articleGalleryClass, {
                     navigation: {

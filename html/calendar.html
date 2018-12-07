@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Детский мир - Календарь инвестора</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 </head>
 <body>
@@ -121,11 +122,15 @@
             </section>
             <!-- Блок "Контакты" -->
             <div class="include" id="contacts"></div>
+            <!-- Нижнее меню (для малых экранов) -->
+            <div class="include" id="footer-nav"></div>
             <!-- Футер -->
             <div class="include" id="footer"></div>
         </div>
-        <!-- Виджет "Котировки акций" -->
-        <div class="include" id="stock"></div>
+        <aside class="side-widget-wrapper">
+            <!-- Виджет "Котировки акций" -->
+            <div class="include" id="stock"></div>
+        </aside>
     </div>
     <script src="../assets/js/bundle.js"></script>
 </body>

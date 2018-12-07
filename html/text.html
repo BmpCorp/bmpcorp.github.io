@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дополнительный шаблон статьи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+</head>
+<body>
+    <div class="page-content">
+        <!-- Боковой блок с логотипом и навигацией -->
+        <div class="include" id="nav"></div>
+        <!-- Основное содержимое, а также футер -->
+        <div class="main-content">
+            <!-- Основной блок "Годовые отчёты" -->
+            <section class="article">
+                <h1>Ежеквартальные отчеты стиль h1</h1>
+                <h2>2018</h2>
+                <div class="article-file article-file--pdf">
+                    <div class="article-file__title">Отчет за II квартал 2018 года</div>
+                    <div class="article-file__file-type">PDF, 6 Мб</div>
+                </div>
+                <div class="article-file article-file--pdf">
+                    <div class="article-file__title">Отчет за I квартал 2018 года</div>
+                    <div class="article-file__file-type">PDF, 1 Мб</div>
+                </div>
+                <br>
+                <h2>Заголовок поменьше (h2)</h2>
+                <p style="margin-bottom: 4px">
+                    <strong>Коляска Massimo Sport</strong> — это коляска, созданная не только с мыслью о безопасности и комфорте ребенка,
+                    <span style="color: gray;">а также в соответствии с последними тенденциями в мире моды и дизайна.</span>
+                </p>
+                <br>
+                <h3>Диалог (h3)</h3>
+                <h4>Вопрос (h4)</h4>
+                <p>
+                   <strong>
+                       Это коляска, созданная не только с мыслью о безопасности и комфорте ребенка, а также в соответствии
+                       с последними тенденциями в мире моды и дизайна.Эта уникальная система путешествий, которая гарантирует
+                       высокий комфорт управления благодаря надувным колесам и дополнительным амортизаторам, амортизаторы имеют
+                   </strong>
+                </p>
+                <blockquote>
+                    Эта уникальная система путешествий, которая гарантирует высокий комфорт управления благодаря надувным
+                    колесам и дополнительным амортизаторам, амортизаторы имеют фиксацию
+                </blockquote>
+                <h4>Технологичность (h4)</h4>
+                <ul>
+                    <li><span>Сумка для мамы, которая также выполняет функцию рюкзака</span></li>
+                    <li><span>Накидки на ножки для люльки и прогулочного блока, а также:</span></li>
+                    <li class="article__sublist">
+                        <ul>
+                            <li><span>дождевик и москитная сетка</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <h4>Дополнительные аксессуары (h4)</h4>
+                <ul>
+                    <li><span><a href="#">Комплекты в коляску</a></span></li>
+                    <li><span><a href="#">Матрасики</a></span></li>
+                </ul>
+                <br>
+                <button class="article__button article__button--xl">Кнопка</button>
+                <h4>Дополнительные аксессуары (h4)</h4>
+                <ol>
+                    <li><span>Поиск и карта сайта</span></li>
+                    <li><span>О магазине</span></li>
+                </ol>
+                <ol start="22">
+                    <li><span>Доставка и оплата</span></li>
+                </ol>
+                <ol start="340">
+                    <li><span>Помощь</span></li>
+                </ol>
+                <br>
+                <h4>Характеристики</h4>
+                <div class="article__table-wrapper">
+                    <div class="article-table article-table--two-columns">
+                        <div class="article-table__body">
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Страна-производитель</div>
+                                <div class="article-table__cell">Польша</div>
+                            </div>
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Материал</div>
+                                <div class="article-table__cell">металл, текстиль, пластик</div>
+                            </div>
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Габариты упаковки</div>
+                                <div class="article-table__cell">52 х 59 х 92 см</div>
+                            </div>
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Вес упаковки</div>
+                                <div class="article-table__cell">25.7 кг</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Если таблица длиннее ширины блока, то появляеться нативный броузерный скрол</h4>
+                <div class="article__table-wrapper">
+                    <div class="article-table article-table--four-columns">
+                        <div class="article-table__header">
+                            <div class="article-table__header-row">
+                                <div class="article-table__header-cell">Организация</div>
+                                <div class="article-table__header-cell">Аналитик</div>
+                                <div class="article-table__header-cell">E-mail</div>
+                                <div class="article-table__header-cell">Телефон</div>
+                            </div>
+                        </div>
+                        <div class="article-table__body">
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Credit Suisse</div>
+                                <div class="article-table__cell">Виктория Петрова</div>
+                                <div class="article-table__cell">
+                                    <a class="article-table__link" href="mailto:victoria.petrova@credit-suisse.com">
+                                        victoria.petrova@credit-suisse.com
+                                    </a>
+                                </div>
+                                <div class="article-table__cell">+7 495 967-83-93</div>
+                            </div>
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Goldman Sachs</div>
+                                <div class="article-table__cell">Юлия Герасимова</div>
+                                <div class="article-table__cell">
+                                    <a class="article-table__link" href="mailto:yulia.gva@gs.com">
+                                        yulia.gva@gs.com
+                                    </a>
+                                </div>
+                                <div class="article-table__cell">+7 495 645-42-97</div>
+                            </div>
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Morgan Stanley</div>
+                                <div class="article-table__cell">Мария Бераснева</div>
+                                <div class="article-table__cell">
+                                    <a class="article-table__link" href="mailto:maryia.berasneva@morganstanley.com">
+                                        maryia.berasneva@morganstanley.com
+                                    </a>
+                                </div>
+                                <div class="article-table__cell">+44 20 7425-7502</div>
+                            </div>
+                            <div class="article-table__row">
+                                <div class="article-table__cell">Открытие</div>
+                                <div class="article-table__cell">Артур Галимов</div>
+                                <div class="article-table__cell">
+                                    <a class="article-table__link" href="mailto:artur.galimov@otkritie.com">
+                                        artur.galimov@otkritie.com
+                                    </a>
+                                </div>
+                                <div class="article-table__cell">+7 495 777-56-56</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#"><b>Скрыть описание</b></a>
+            </section>
+            <!-- Блок "Контакты" -->
+            <div class="include" id="contacts"></div>
+            <!-- Нижнее меню (для малых экранов) -->
+            <div class="include" id="footer-nav"></div>
+            <!-- Футер -->
+            <div class="include" id="footer"></div>
+        </div>
+        <aside class="side-widget-wrapper">
+            <!-- Виджет "Котировки акций" -->
+            <div class="include" id="stock"></div>
+        </aside>
+    </div>
+    <script src="../assets/js/bundle.js"></script>
+</body>
+</html>

@@ -10667,6 +10667,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.toggleMenu = function () {
             var menu = document.querySelector("." + _this.menuClass);
             menu.classList.toggle(_this.menuOpenedClass);
+            if (menu.classList.contains(_this.menuOpenedClass)) {
+                document.body.addEventListener("mousedown", _this.outsideClicked);
+            } else {
+                document.body.removeEventListener("mousedown", _this.outsideClicked);
+            }
+        };
+
+        this.outsideClicked = function (event) {
+            var elementClicked = event.target;
+            var menu = document.querySelector("." + _this.menuClass);
+            var menuButton = document.querySelector("." + _this.menuButtonClass);
+
+            console.log(elementClicked);
+            if (elementClicked !== menuButton && !menu.contains(elementClicked)) {
+                _this.toggleMenu();
+            }
         };
 
         this.submenuClicked = function (event) {

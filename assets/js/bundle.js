@@ -10679,7 +10679,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var menu = document.querySelector("." + _this.menuClass);
             var menuButton = document.querySelector("." + _this.menuButtonClass);
 
-            console.log(elementClicked);
             if (elementClicked !== menuButton && !menu.contains(elementClicked)) {
                 _this.toggleMenu();
             }
@@ -10708,7 +10707,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var outer = document.createElement("div");
             outer.style.visibility = "hidden";
             outer.style.width = "100px";
-            outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+            outer.style.msOverflowStyle = "scrollbar";
 
             document.body.appendChild(outer);
 
@@ -10729,6 +10728,47 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return widthNoScroll - widthWithScroll;
         };
     }
+
+    /**
+     * Открыть или закрыть блок меню (для малых экранов).
+     */
+
+
+    /**
+     * Обработать клик за пределами открытого меню, чтобы его закрыть.
+     * @param event Событие mousedown.
+     */
+
+
+    /**
+     * Обработать клик по заголовку подменю.
+     * @param event Событие click.
+     */
+
+
+    /**
+     * Открыть или закрыть подменю.
+     * @param submenu Ссылка на подменю.
+     */
+
+
+    /**
+     * Обработать клик по заголовку подменю в футере (для малых экранов).
+     * @param event Событие click.
+     */
+
+
+    /**
+     * Открыть или закрыть подменю в футере (для малых экранов).
+     * @param submenu Ссылка на подменю футера.
+     */
+
+
+    /**
+     * Вычислить точное значение ширины скроллбара в данном браузере.
+     * @returns {number} Ширина скроллбара.
+     */
+
 
     return _class2;
 }())());
@@ -10752,6 +10792,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.resultsSliderClass = "results__slider";
         this.articleGalleryClass = "article__slider--gallery";
         this.articleThumbsClass = "article__slider--thumbnails";
+        this.largeTextClass = "results-slide__large-text";
+        this.largeTextClassEdgePostfix = "--edge";
 
         this.init = function () {
             // Слайдер в виджете на главной странице.
@@ -10780,6 +10822,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         }
                     }
                 });
+
+                // В Edge большой шрифт не влезает на самом большом брейкпоинте, фиксим это.
+                if (window.navigator.userAgent.indexOf("Edge") !== -1) {
+                    var bigFontSpans = resultsSlider.querySelectorAll("." + _this.largeTextClass);
+                    bigFontSpans.forEach(function (span) {
+                        span.classList.add(_this.largeTextClass + _this.largeTextClassEdgePostfix);
+                    });
+                }
             }
 
             // Слайдеры на странице статьи.
@@ -10809,7 +10859,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 });
             }
 
-            // TODO: Исправить этот костыль
+            // Вызываем событие изменения размера, чтобы слайды стали нормальной ширины.
             setTimeout(function () {
                 return window.dispatchEvent(new Event("resize"));
             }, 100);

@@ -10792,8 +10792,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.resultsSliderClass = "results__slider";
         this.articleGalleryClass = "article__slider--gallery";
         this.articleThumbsClass = "article__slider--thumbnails";
-        this.largeTextClass = "results-slide__large-text";
-        this.largeTextClassEdgePostfix = "--edge";
+        this.largeTextClass = "results-slide__text--large";
+        this.largeTextClassEdgePostfix = "-edge";
 
         this.init = function () {
             // Слайдер в виджете на главной странице.
@@ -10820,7 +10820,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         599: {
                             spaceBetween: 12
                         }
-                    }
+                    },
+                    threshold: 8
                 });
 
                 // В Edge большой шрифт не влезает на самом большом брейкпоинте, фиксим это.

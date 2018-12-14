@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="38px" viewBox="0 0 30 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Extra / Documnts / Text / Blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M28,31.872 C28,33.573 27.828,34.026 27.584,34.482 C27.333,34.952 26.952,35.332 26.482,35.584 C26.027,35.828 25.573,36 23.872,36 L11.644,36 C11.424,36 11.209,35.971 11,35.925 L11,29.97 C11,28.33 9.67,27 8.03,27 L2.075,27 C2.029,26.79 2,26.576 2,26.356 L2,6.128 C2,4.427 2.172,3.974 2.416,3.518 C2.667,3.048 3.048,2.667 3.518,2.416 C3.974,2.172 4.427,2 6.128,2 L23.872,2 C25.573,2 26.026,2.172 26.482,2.416 C26.952,2.667 27.333,3.048 27.584,3.518 C27.828,3.974 28,4.428 28,6.128 L28,31.872 Z M27.425,0.652 C28.245,1.091 28.909,1.755 29.348,2.575 C29.771,3.366 30,4.166 30,6.128 L30,31.872 C30,33.833 29.771,34.634 29.348,35.425 C28.91,36.245 28.245,36.909 27.425,37.347 C26.635,37.77 25.834,38 23.872,38 L11.644,38 C11.498,38 11.26,37.9766667 10.93,37.93 C9.875,37.779 8.897,37.312 8.131,36.545 L1.455,29.869 C0.688,29.102 0.221,28.124 0.07,27.07 C0.0233333333,26.74 0,26.502 0,26.356 L0,6.128 C0,4.166 0.229,3.366 0.652,2.575 C1.091,1.755 1.755,1.091 2.575,0.652 C3.366,0.229 4.167,0 6.128,0 L23.872,0 C25.833,0 26.634,0.229 27.425,0.652 Z M23,7.9999 L7,7.9999 C6.448,7.9999 6,8.4479 6,8.9999 C6,9.5519 6.448,9.9999 7,9.9999 L23,9.9999 C23.552,9.9999 24,9.5519 24,8.9999 C24,8.4479 23.552,7.9999 23,7.9999 Z M23,13.9999 L7,13.9999 C6.448,13.9999 6,14.4479 6,14.9999 C6,15.5519 6.448,15.9999 7,15.9999 L23,15.9999 C23.552,15.9999 24,15.5519 24,14.9999 C24,14.4479 23.552,13.9999 23,13.9999 Z M17.1055,20.4999 L7.0005,20.4999 C6.4475,20.4999 6.0005,20.9479 6.0005,21.4999 C6.0005,22.0519 6.4475,22.4999 7.0005,22.4999 L17.1055,22.4999 C17.6575,22.4999 18.1055,22.0519 18.1055,21.4999 C18.1055,20.9479 17.6575,20.4999 17.1055,20.4999 Z" id="path-1"></path>
+        <rect id="path-3" x="0" y="0" width="30" height="38"></rect>
+        <filter x="-183.3%" y="-92.1%" width="466.7%" height="389.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="20" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="15" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.156862745   0 0 0 0 0.509803922   0 0 0 0 0.901960784  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="CorpSite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Corp_Invest_Assets" transform="translate(-44.000000, -143.000000)">
+            <g id="Icon-/-Extra-/-Documnts-/-Text" transform="translate(44.000000, 143.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use fill="#9FBADE" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <g id="Color-/-1.-Base-/-Base-Light-1" mask="url(#mask-2)">
+                    <g id="Fill">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#2882E6" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

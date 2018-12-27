@@ -2,286 +2,46 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Детский мир - инвесторам</title>
+    <title>Детский мир - Республика Беларусь</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+    <!-- Сервис Яндекс-карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a921a6a3-d405-467f-ac46-0e172ba12df4&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
-    <div class="page-content">
+    <div class="page-wrap">
         <!-- Боковой блок с логотипом и навигацией -->
-        <div class="include" id="nav"></div>
-        <!-- Основное содержимое, а также футер -->
+        <aside class="include" id="nav"></aside>
+        <!-- Основное содержимое главной страницы (включая футер) -->
         <div class="index-content">
-            <!-- Контейнер с двумя первыми блоками -->
-            <section class="content-block">
-                <!-- Блок с информацией на главной странице -->
-                <div class="info">
-                    <h2 class="info__title">Раскрытие информации</h2>
-                    <div class="info-group">
-                        <a class="info-group__title" href="#">Финансовые результаты</a>
-                        <ul class="info-items">
-                            <li class="info-item info-item--pdf">
-                                <div class="info-item__title">
-                                    Анализ руководством компании финансового состояния и …  результатов деятельности 6мес 2018
-                                </div>
-                                <div class="info-item__file-type">PDF, 6 Мб</div>
-                            </li>
-                            <li class="info-item info-item--pdf">
-                                <div class="info-item__title">
-                                    Пресс-релиз 6 мес 2018
-                                </div>
-                                <div class="info-item__file-type">PDF, 1 Мб</div>
-                            </li>
-                            <li class="info-item info-item--pdf">
-                                <div class="info-item__title">
-                                    Финансовый отчет 6 мес 2018
-                                </div>
-                                <div class="info-item__file-type">PDF, 1 Мб</div>
-                            </li>
-                            <li class="info-item info-item--pdf">
-                                <div class="info-item__title">
-                                    Презентация
-                                </div>
-                                <div class="info-item__file-type">PDF, 1 Мб</div>
-                            </li>
-                            <li class="info-item info-item--text">
-                                <div class="info-item__title">
-                                    Аудиозапись телефонной конференции
-                                </div>
-                                <div class="info-item__file-type">MP3, 1 Мб</div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="info-group info-group--last">
-                        <a class="info-group__title" href="#">Операционные результаты</a>
-                        <ul class="info-items">
-                            <li class="info-item info-item--pdf">
-                                <div class="info-item__title">
-                                    Презентация
-                                </div>
-                                <div class="info-item__file-type">PDF, 1 Мб</div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Виджет "Котировки акций" -->
-                <div class="include" id="stock"></div>
-            </section>
-            <!-- Контейнер с виджетами "Календарь инвестора" и "Годовой отчёт" -->
-            <section class="content-block content-block--last">
-                <!-- Виджет "Календарь инвестора" -->
-                <div class="calendar-widget">
-                    <h2 class="calendar-widget__title">Календарь инвестора</h2>
-                    <div class="calendar-widget__latest-event-text">Ближайшее событие</div>
-                    <div class="calendar-widget-event">
-                        <div class="calendar-widget-event__date">18 октября</div>
-                        <div class="calendar-widget-event__description">
-                            Hеаудированные финансовые результаты по МСФО за 3кв. и 9м. 2018 г.<br>
-                            <b>Организатор:</b><br>
-                            ГК "Детский мир”<br>
-                            <b>Место:</b> Москва
-                        </div>
-                        <a class="calendar-widget-event__add-link" href="#">+ Добавить в календарь</a>
-                    </div>
-                    <a class="calendar-widget__show-all" href="#">Весь календарь...</a>
-                </div>
-                <!-- Виджет "Годовой отчёт" -->
-                <div class="reports-widget">
-                    <h2 class="reports-widget__title">Годовой отчет</h2>
-                    <div class="reports-widget-items">
-                        <div class="current-report">
-                            <div class="current-report__name">детский мир</div>
-                            <div class="current-report__type">Годовой отчет</div>
-                            <div class="current-report__year">2017</div>
-                        </div>
-                        <div class="previous-reports">
-                            <div class="previous-report">
-                                <div class="previous-report__name">детский мир</div>
-                                <div class="previous-report__type">Годовой отчет</div>
-                                <div class="previous-report__year">2016</div>
-                            </div>
-                            <div class="previous-report">
-                                <div class="previous-report__name">детский мир</div>
-                                <div class="previous-report__type">Годовой отчет</div>
-                                <div class="previous-report__year">2015</div>
-                            </div>
-                            <div class="previous-report">
-                                <div class="previous-report__name">детский мир</div>
-                                <div class="previous-report__type">Годовой отчет</div>
-                                <div class="previous-report__year">2014</div>
-                            </div>
-                            <a class="other-reports" href="#">Еще</a>
-                        </div>
-                    </div>
-                    <a class="reports-widget__show-all" href="#">Все статьи...</a>
-                </div>
-            </section>
-            <!-- Виджет "Финансовые результаты" / "Операционные результаты" -->
-            <section class="results">
-                <h2 class="results__title">Основные показатели и ключевые факторы</h2>
-                <div class="swiper-container results__slider">
+            <!-- Личный кабинет -->
+            <section class="include" id="cabinet"></section>
+            <!-- Слайдер с баннерами -->
+            <section class="banners">
+                <div class="swiper-container banners__slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="results-slide-group">
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        Бесспорный лидер на рынке детских товаров России – крупном, растущем и устойчивом сегменте потребительского рынка
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">622</span>
-                                        <br>
-                                        магазина на 31 декабря 2017 года
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">104</span>
-                                        <br>
-                                        магазина В 2017 году открыто 104 магазина сети «Детский мир», включая 10 магазинов в Казахстане
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!--<div class="swiper-slide">
-                            <div class="result-slide-group">
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        Бесспорный лидер на рынке детских товаров в России – «Детский мир» в 5 раз больше ближайшего конкурента
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">20%</span>
-                                        <br>
-                                        доля на рынке детских товаров в 2017 году
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">622</span>
-                                        <br>
-                                        магазина на 31 декабря 2017 года
-                                    </p>
-                                </div>
-                            </div>
-                        </div>-->
-
-                        <div class="swiper-slide">
-                            <div class="results-slide-group">
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        Основополагающий бренд в своей категории розничной торговли, высокая востребованность среди покупателей и длительное присутствие на рынке
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--medium">70 лет</span>
-                                        <br>
-                                        истории бренда
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">99%</span>
-                                        <br>
-                                        узнаваемость бренда в России
-                                    </p>
-                                </div>
+                            <div class="banner banner--green">
+                                <p>
+                                    <strong class="banner__text--strong">Более 600</strong> магазинов в России и Казахстане.
+                                    Общая площадь магазинов <strong class="banner__text--strong">700 000</strong> квадратных метров
+                                </p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="results-slide-group">
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        Высокодиверсифицированный ассортимент товаров позволяет обеспечить постоянный поток покупателей, а также рост и устойчивость продаж и прибыльности
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">+7.2%</span>
-                                        <br>
-                                        высокий рост сопоставимых продаж (like-for-like) в 2017 году
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--medium">+14,1%</span>
-                                        <br>
-                                        двузначный рост количества чеков в 2017 году
-                                    </p>
-                                </div>
+                            <div class="banner banner--blue">
+                                <p>
+                                    <strong class="banner__text--strong">Более 700</strong> магазинов в России и Казахстане.
+                                    Общая площадь магазинов <strong class="banner__text--strong">750 000</strong> квадратных метров
+                                </p>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="results-slide-group">
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        Быстрорастущее направление интернет-торговли и наличие различных каналов продаж способствуют устойчивому росту бизнеса Компании
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">+67%</span>
-                                        <br>
-                                        рост онлайн-выручки в 2017 году
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">4,8%</span>
-                                        <br>
-                                        доля онлайн-бизнеса в выручке ГК «Детский мир» в 2017 году
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="results-slide-group">
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        Бизнес-модель, отличающаяся низкой капиталоемкостью и высокими показателями генерируемого денежного потока, обеспечивает высокий уровень доходности на капитал и стабильную выплату дивидендов
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">+86%</span>
-                                        <br>
-                                        Скорр. ROIC в 2017 году
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">4,8</span>
-                                        <br>
-                                        млрд руб распределено в качестве дивидендов акционерам 100% чистой прибыли в 2017 году
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="results-slide-group">
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        Сильная команда менеджмента с успешным опытом развития бизнеса
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">3х</span>
-                                        <br>
-                                        команда менеджмента увеличила выручку за 5 лет
-                                    </p>
-                                </div>
-                                <div class="results-slide">
-                                    <p class="results-slide__content">
-                                        <span class="results-slide__text--large">3х</span>
-                                        <br>
-                                        команда менеджмента увеличила количество магазинов за 5 лет
-                                    </p>
-                                </div>
+                            <div class="banner banner--red">
+                                <p>
+                                    <strong class="banner__text--strong">Более 800</strong> магазинов в России и Казахстане.
+                                    Общая площадь магазинов <strong class="banner__text--strong">800 000</strong> квадратных метров
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -290,8 +50,223 @@
                     <div class="swiper-button-next"></div>
                 </div>
             </section>
-            <!-- Контакты, нижнее меню и футер -->
-            <div class="include" id="footer"></div>
+            <!-- Блок "Адреса магазинов" -->
+            <section class="shops-widget">
+                <h2 class="shops-widget-title">
+                    <a class="shops-widget-title__link" href="/html/shops.html">Адреса магазинов</a>
+                    <span class="shops-widget-title__non-interactive">Адреса магазинов</span>
+                </h2>
+                <div class="shops-widget__cities">
+                    <ul class="shops-widget__city-list">
+                        <li class="shops-widget__city-list-prefix">24 магазина в 5 городах:</li>
+                        <li class="shops-widget__city">Минск</li>
+                        <li class="shops-widget__city">Гродно</li>
+                        <li class="shops-widget__city">Витебск</li>
+                        <li class="shops-widget__city">Гомель</li>
+                        <li class="shops-widget__city">Полоцк</li>
+                        <li class="shops-widget__city">Бобруйск</li>
+                    </ul>
+                </div>
+                <div class="shops-widget__shops-wrap scrollbar-outer">
+                    <h3 class="shops-widget__selected-city-name">Минск</h3>
+                    <ul class="shops-widget__shop-list">
+                        <li class="shops-widget-shop">
+                            <div class="shops-widget-shop__name">ТЦ «Мечта»</div>
+                            <div class="shops-widget-shop__description">
+                                12А мкр., здание 1/3, 3 этаж
+                                <br>
+                                Ежедневно 10:00-20:00
+                            </div>
+                        </li>
+                        <li class="shops-widget-shop">
+                            <div class="shops-widget-shop__name">ТК «City shopping center»</div>
+                            <div class="shops-widget-shop__description">
+                                Пр-т Абулхаир-Хана, 12 мкр., д.21Л
+                                <br>
+                                Ежедневно 10:00-22:00
+                            </div>
+                        </li>
+                        <li class="shops-widget-shop">
+                            <div class="shops-widget-shop__name">ТЦ Green</div>
+                            <div class="shops-widget-shop__description">
+                                Пр-т Суюнбая, д. 2, 1 этаж
+                                <br>
+                                Ежедневно 09:00-22:00
+                            </div>
+                        </li>
+                        <li class="shops-widget-shop">
+                            <div class="shops-widget-shop__name">ТЦ «Апорт»</div>
+                            <div class="shops-widget-shop__description">
+                                Трасса Алматы Бишкек 17 км
+                                <br>
+                                Вс-Чт 10:00-22:00 · Пт-Сб 10:00-23:00
+                            </div>
+                        </li>
+                        <li class="shops-widget-shop">
+                            <div class="shops-widget-shop__name">ТРЦ MAXIMA</div>
+                            <div class="shops-widget-shop__description">
+                                Трасса Алматы Бишкек 17 км
+                                <br>
+                                Вс-Чт 10:00-22:00 · Пт-Сб 10:00-23:00
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shops-widget__map" id="shops-widget__map">
+                    <!-- TODO: Подключить Яндекс.карты -->
+                </div>
+            </section>
+            <!-- Блок с бонусными и подарочными картами -->
+            <section class="index-content-block index-content-block--cards">
+                <!-- Блок с информацией о бонусных картах -->
+                <div class="card-widget card-widget--bonus">
+                    <h2 class="card-widget__title">Бонусные карты</h2>
+                    <p class="card-widget__description">
+                        До <strong class="card-widget__text--strong">100%</strong> покупки оплачивайте бонусами
+                        <br>
+                        До <strong class="card-widget__text--strong">5%</strong> бонусами за каждую покупку
+                    </p>
+                    <button class="button button--large card-widget__button">
+                        <span class="button__content">О бонусной карте</span>
+                    </button>
+                    <ul class="card-widget-faq">
+                        <li class="card-widget-faq__item">
+                            <a class="link" href="#">Как получить карту</a>
+                        </li>
+                        <li class="card-widget-faq__item">
+                            <a class="link" href="#">Вопросы и ответы</a>
+                        </li>
+                        <li class="card-widget-faq__item">
+                            <a class="link" href="#">Правила</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Блок с информацией о подарочных картах -->
+                <div class="card-widget card-widget--gift">
+                    <h2 class="card-widget__title">Подарочные карты</h2>
+                    <p class="card-widget__description">
+                        Мы предлагаем большое разнообразие подарочных карт с фиксированным номиналом:
+                        <strong class="card-widget__text--strong">10</strong>,
+                        <strong class="card-widget__text--strong">20</strong>,
+                        <strong class="card-widget__text--strong">30</strong>,
+                        <strong class="card-widget__text--strong">50</strong>,
+                        <strong class="card-widget__text--strong">100</strong>
+                        белорусских рублей, а также подарочные карты гибкого номинала.
+                    </p>
+                    <button class="button button--large card-widget__button">
+                        <span class="button__content">Узнать больше</span>
+                    </button>
+                    <ul class="card-widget-faq">
+                        <li class="card-widget-faq__item">
+                            <a class="link" href="#">Проверить баланс</a>
+                        </li>
+                        <li class="card-widget-faq__item">
+                            <a class="link" href="#">Правила</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Блок с виджетами "Новости" и "Акции" -->
+            <section class="index-content-block index-content-block--news-and-offers">
+                <!-- Блок новостей -->
+                <div class="news-widget">
+                    <h2 class="news-widget__title">Новости</h2>
+                    <ul class="news-widget__news-list">
+                        <li class="news-widget-item">
+                            <img class="news-widget-item__image" src="/assets/img/Placeholders/news-image.jpg">
+                            <h3 class="news-widget-item__date"><time datetime="2018-08-03">3 августа 2018</time></h3>
+                            <div class="news-widget-item__description">
+                                Анализ руководством компании финансового состояния и результатов деятельности 6мес 2018
+                            </div>
+                            <a class="link news-widget-item__link" href="#">Читать дальше...</a>
+                        </li>
+                        <li class="news-widget-item">
+                            <img class="news-widget-item__image" src="/assets/img/Placeholders/news-image.jpg">
+                            <h3 class="news-widget-item__date"><time datetime="2018-07-14">14 июля 2018</time></h3>
+                            <div class="news-widget-item__description">
+                                Правила и вопросы и ответы возвратных карт, правила и вопросы и ответы для корпоративных клиентов
+                                <br>
+                                баланс на подарочной карте
+                            </div>
+                            <a class="link news-widget-item__link" href="#">Читать дальше...</a>
+                        </li>
+                    </ul>
+                    <a class="link news-widget__show-all" href="/html/news.html">Все новости...</a>
+                </div>
+                <!-- Блок акций -->
+                <a class="offer-widget" href="#">
+                    <h2 class="offer-widget__title">Акции</h2>
+                    <div class="offer-widget__subtitle">Актуальные акции и предложения</div>
+                    <button class="button button--large offer-widget__button">
+                        <span class="button__content">Смотреть PDF</span>
+                    </button>
+                </a>
+            </section>
+            <!-- Блок "Ассортимент магазинов" -->
+            <section class="assortment">
+                <h2 class="assortment__title">Ассортимент магазинов</h2>
+                <ul class="assortment__categories">
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Детские игрушки и игры</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Гигиена и уход</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Детская комната</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Спорт и отдых</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Питание и кормление</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Подгузники и пеленки</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Товары для мамы</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Одежда и обувь</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Хобби и творчество</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Товары для школы</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Книги для детей</h3>
+                    </li>
+                    <li class="assortment-category">
+                        <h3 class="assortment-category__title">Прогулки и путешествия</h3>
+                    </li>
+                </ul>
+            </section>
+            <!-- Блок "Бренды" -->
+            <section class="brands">
+                <h2 class="brands__title">Бренды</h2>
+                <ul class="brands__list">
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                    <li class="brand"></li>
+                </ul>
+                <div class="brands__count">Более 125 брендов</div>
+            </section>
+            <!-- Футер -->
+            <footer class="include" id="footer"></footer>
         </div>
     </div>
     <script src="/assets/js/bundle.js"></script>

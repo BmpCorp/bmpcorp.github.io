@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="114px" viewBox="0 0 86 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>ill_monitor_mail_sms</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Belarus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Corp_BelMir_000_UI_illustration" transform="translate(-988.000000, -2090.000000)">
+            <g id="ill_monitor_mail_sms" transform="translate(962.000000, 2084.000000)">
+                <g id="Group-2" transform="translate(29.935484, 76.419355)">
+                    <g id="Group-4">
+                        <g id="Group-18">
+                            <g id="Group-3" transform="translate(0.015107, 0.189962)">
+                                <path d="M17.157433,34.6912919 L17.157433,40.8264979 C23.9019487,40.3228567 27.2134259,40.0281975 27.0918647,39.9425203 C26.9703034,39.8568431 26.8035418,37.6045274 26.5915798,33.1855734 L17.157433,34.6912919 Z" id="Path-88" fill="#CDE005"></path>
+                                <path d="M0.224010573,0.953717494 C0.274461913,0.937183174 42.7841044,-0.0562184377 42.6929335,0.123841242 C42.6321529,0.243881029 42.5289748,11.5810719 42.3833992,34.135414 L0.224010573,34.9833046 C0.190376347,12.3079361 0.190376347,0.964740374 0.224010573,0.953717494 Z" id="Path-87" fill="#00CD52"></path>
+                                <path d="M8.77326253,39.9937371 C8.71947227,40.071964 8.71947227,40.9750697 8.77326253,42.7030544 L35.5516426,42.7030544 C35.5168771,40.6543395 35.5168518,39.6761477 35.5515666,39.7684792 C35.6036389,39.9069763 8.8539479,39.8763967 8.77326253,39.9937371 Z" id="Path-89" fill="#00CD52"></path>
+                                <polygon id="Path-90" fill="#FFFFFF" points="4.27834052 26.0929961 38.3185064 25.8113793 38.3185064 4.60833567 4.27834052 5.23219514"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g id="Group-2" transform="translate(81.995520, 68.848312) rotate(3.000000) translate(-81.995520, -68.848312) translate(48.495520, 31.348312)">
+                    <g id="Group-6" transform="translate(-0.000000, 0.000000)">
+                        <path d="M6.09768542,47.3854795 L33.3845822,69.7057375 C52.5781014,53.365258 62.1037105,45.2204727 61.9614097,45.2713817 C61.9388887,45.2794388 61.5059251,31.6002013 60.6625188,4.23366937 L5.26896174,4.62438393 L6.09768542,47.3854795 Z" id="Path-84-Copy-2" fill="#0073E6" transform="translate(33.615971, 36.969703) scale(1, -1) rotate(-8.000000) translate(-33.615971, -36.969703) "></path>
+                        <polygon id="Path" fill="#17C8F0" points="55.0654746 74.9062866 1.00137047 65.5434753 5.43260646 34.052336 29.3934207 57.2807986 61.7430348 39.6023827"></polygon>
+                    </g>
+                </g>
+                <g id="Group-5-Copy-4" transform="translate(60.015279, 39.434116) rotate(17.000000) translate(-60.015279, -39.434116) translate(26.515279, 13.434116)">
+                    <polygon id="Rectangle-Copy-2" fill="#CDE005" transform="translate(33.541699, 26.069187) rotate(4.000000) translate(-33.541699, -26.069187) " points="2.36723724 3.11152016 64.5903707 2.46545848 64.7161612 49.6729154 52.3921639 38.0758127 2.54022111 38.5094513"></polygon>
+                    <text id="8954" transform="translate(33.515208, 21.031542) rotate(4.000000) translate(-33.515208, -21.031542) " font-family="CirceRoundedDM-Bold, Circe Rounded DM" font-size="11.9" font-weight="bold" line-spacing="12" fill="#0073E6">
+                        <tspan x="16.7410145" y="26.031542">8954</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

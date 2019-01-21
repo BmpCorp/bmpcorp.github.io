@@ -1,0 +1,578 @@
+<!-- Попап авторизации и смены номера телефона -->
+<div class="modal auth">
+    <div class="modal__window auth__window">
+        <!-- Состояние "Вход по номеру телефона" -->
+        <div class="auth__state auth__login-phone auth__state--active">
+            <h2 class="modal__title">Вход</h2>
+            <p class="modal__prompt">Введите номер телефона, на который зарегистрирована бонусная карта</p>
+            <form class="form auth__form">
+                <div class="form__item auth__phone">
+                    <label class="form__label" for="auth__phone">Номер телефона</label>
+                    <input class="input-text" id="auth__phone" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                    <div class="form__error">Номер не зарегистрирован</div>
+                </div>
+            </form>
+            <a class="auth__link auth__change-type">Войти по номеру карты</a>
+        </div>
+        <!-- Сотояние "Вход по номеру карты" -->
+        <div class="auth__state auth__login-card">
+            <h2 class="modal__title">Вход</h2>
+            <p class="modal__prompt">Введите номер вашей бонусной карты</p>
+            <form class="form auth__form">
+                <div class="form__item auth__card">
+                    <label class="form__label" for="auth__card">Номер карты</label>
+                    <input class="input-text" id="auth__card" type="text" placeholder="ХХXX-ХХХX-XXХХ-ХXXХ">
+                    <div class="form__error">К карте не привязан номер телефона</div>
+                </div>
+            </form>
+            <a class="auth__link auth__change-type">Войти по номеру телефона</a>
+        </div>
+        <!-- Состояние "Вход по номеру телефона, номер найден" -->
+        <div class="auth__state auth__login-phone-valid">
+            <h2 class="modal__title">Вход</h2>
+            <form class="form auth__form">
+                <div class="form__item auth__phone">
+                    <label class="form__label" for="auth__phone--valid">Номер телефона</label>
+                    <input class="input-text input-text--validated" id="auth__phone--valid" type="tel">
+                </div>
+                <div class="form__item auth__card">
+                    <label class="form__label" for="auth__card--valid">Номер карты</label>
+                    <input class="input-text" id="auth__card--valid" type="text" disabled>
+                </div>
+            </form>
+            <button class="button button--large auth__button--large auth__send-sms">
+                <span class="button__content">Получить код в СМС</span>
+            </button>
+            <button class="button auth__button--small auth__send-sms">
+                <span class="button__content">Получить код</span>
+            </button>
+            <a class="auth__link auth__edit-phone">Сменить номер телефона</a>
+        </div>
+        <!-- Состояние "Вход по номеру карты, номер найден" -->
+        <div class="auth__state auth__login-card-valid">
+            <h2 class="modal__title">Вход</h2>
+            <form class="form auth__form">
+                <div class="form__item auth__phone">
+                    <label class="form__label" for="auth__phone--valid2">Номер телефона</label>
+                    <input class="input-text" id="auth__phone--valid2" type="tel" disabled>
+                </div>
+                <div class="form__item auth__card">
+                    <label class="form__label" for="auth__card--valid2">Номер карты</label>
+                    <input class="input-text input-text--validated" id="auth__card--valid2" type="text">
+                </div>
+            </form>
+            <button class="button button--large auth__button--large auth__send-sms">
+                <span class="button__content">Получить код в СМС</span>
+            </button>
+            <button class="button auth__button--small auth__send-sms">
+                <span class="button__content">Получить код</span>
+            </button>
+            <a class="auth__link auth__edit-phone">Сменить номер телефона</a>
+        </div>
+        <!-- Состояние "Вход по номеру телефона, карта заблокирована" -->
+        <div class="auth__state auth__login-phone-blocked">
+            <h2 class="modal__title">Вход</h2>
+            <form class="form auth__form">
+                <div class="form__item auth__phone">
+                    <label class="form__label" for="auth__phone--blocked">Номер телефона</label>
+                    <input class="input-text input-text--validated" id="auth__phone--blocked" type="tel">
+                </div>
+                <div class="form__item auth__card">
+                    <label class="form__label" for="auth__card--blocked">Номер карты</label>
+                    <input class="input-text input-text--error" id="auth__card--blocked" type="text" disabled>
+                    <div class="form__error">Ваша карта заблокирована</div>
+                </div>
+            </form>
+        </div>
+        <!-- Состояние "Вход по номеру карты, карта заблокирована" -->
+        <div class="auth__state auth__login-card-blocked">
+            <h2 class="modal__title">Вход</h2>
+            <form class="form auth__form">
+                <div class="form__item auth__phone">
+                    <label class="form__label" for="auth__phone--blocked2">Номер телефона</label>
+                    <input class="input-text" id="auth__phone--blocked2" type="tel" disabled>
+                </div>
+                <div class="form__item auth__card">
+                    <label class="form__label" for="auth__card--blocked2">Номер карты</label>
+                    <input class="input-text input-text--error" id="auth__card--blocked2" type="text">
+                    <div class="form__error">Ваша карта заблокирована</div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Состояние "СМС отправлена, введите код" -->
+        <div class="auth__state auth__login-sms">
+            <h2 class="modal__title">Вход</h2>
+            <p class="modal__prompt">На ваш номер направлено СМС с кодом подтверждения</p>
+            <form class="form auth__form">
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__login-sms">Код из СМС</label>
+                    <input class="input-text" id="auth__login-sms" type="text">
+                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                </div>
+            </form>
+            <a class="auth__link auth__send-sms">Прислать СМС ещё раз</a>
+        </div>
+        <!-- Состояние "СМС отправлена, введите код (с таймером секунд)" -->
+        <div class="auth__state auth__login-sms-timer">
+            <h2 class="modal__title">Вход</h2>
+            <p class="modal__prompt">На ваш номер направлено СМС с кодом подтверждения</p>
+            <form class="form auth__form">
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__login-sms-timer">Код из СМС</label>
+                    <input class="input-text" id="auth__login-sms-timer" type="text">
+                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                </div>
+            </form>
+            <a class="auth__link auth__send-status">Прислать СМС ещё раз через <span>40 секунд</span></a>
+        </div>
+        <!-- Состояние "СМС отправлена, введите код (с таймером минут)" -->
+        <div class="auth__state auth__login-sms-long-timer">
+            <h2 class="modal__title">Вход</h2>
+            <p class="modal__prompt">На ваш номер направлено СМС с кодом подтверждения</p>
+            <form class="form auth__form">
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__login-sms-long-timer">Код из СМС</label>
+                    <input class="input-text" id="auth__login-sms-long-timer" type="text">
+                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                </div>
+            </form>
+            <a class="auth__link auth__send-status auth__send-status--error">Лимит СМС исчерпан, попробуйте через <span>30 минут</span></a>
+        </div>
+        <!-- Состояние "СМС для входа подтверждена" -->
+        <div class="auth__state auth__login-sms-valid">
+            <h2 class="modal__title">Вход</h2>
+            <p class="modal__prompt">На ваш номер направлено СМС с кодом подтверждения</p>
+            <form class="form auth__form">
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__login-sms-valid">Код из СМС</label>
+                    <input class="input-text input-text--validated" id="auth__login-sms-valid" type="text">
+                </div>
+            </form>
+        </div>
+        <!-- Состояние "Изменить номер телефона, почта найдена" -->
+        <div class="auth__state auth__edit-email-found">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small auth__email-found-text">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+                <br>
+                Номер бонусной карты: <span class="auth__new-line auth__card-placeholder"></span>
+                <br>
+                Электронная почта: <b><span class="auth__new-line auth__email-placeholder"></span></b>
+            </p>
+            <p class="modal__prompt auth__email-found-text2">Для смены номера телефона необходимо ввести код из письма</p>
+            <button class="button button--large auth__button--large auth__send-email">
+                <span class="button__content">Получить код по почте</span>
+            </button>
+            <button class="button auth__button--small auth__send-email">
+                <span class="button__content">Получить код</span>
+            </button>
+        </div>
+        <!-- Состояние "Изменить номер телефона, почта не найдена" -->
+        <div class="auth__state auth__edit-email-not-found">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__new-line auth__phone-placeholder"></span>
+                <br>
+                Номер бонусной карты: <span class="auth__new-line auth__new-line auth__card-placeholder"></span>
+                <br>
+                Электронная почта: <span class="auth__new-line auth__new-line auth__error-text">НЕ УКАЗАНА</span>
+            </p>
+            <p class="modal__prompt modal__prompt--medium auth__error-text">
+                В анкете не указана электронная почта, поэтому изменение номера телефона через почту недоступно.
+                Изменить текущий номер телефона и указать электронну почту вы можете в анкете, авторизовавшись
+                с помощью текущего номера телефона <span class="auth__phone-placeholder"></span>.
+            </p>
+            <a class="auth__link auth__back-to-login">Войти по номеру телефона</a>
+        </div>
+        <!-- Состояние "Изменить номер телефона, введите код -->
+        <div class="auth__state auth__edit-email">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+                <br>
+                Номер бонусной карты: <span class="auth__new-line auth__card-placeholder"></span>
+                <br>
+                Электронная почта: <b><span class="auth__new-line auth__email-placeholder"></span></b>
+            </p>
+            <p class="modal__prompt modal__prompt--small">
+                На вашу электронную почту направлено письмо с кодом подтверждения.
+                Если вы не получили письмо, проверьте папку «СПАМ».
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__code">
+                    <label class="form__label" for="auth__email">Код из почты</label>
+                    <input class="input-text" id="auth__email" type="text">
+                </div>
+            </form>
+            <a class="auth__link auth__send-email">Прислать код ещё раз</a>
+        </div>
+        <!-- Состояние "Изменить номер телефона, введите код (с таймером секунд)" -->
+        <div class="auth__state auth__edit-email-timer">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+                <br>
+                Номер бонусной карты: <span class="auth__new-line auth__card-placeholder"></span>
+                <br>
+                Электронная почта: <b><span class="auth__new-line auth__email-placeholder"></span></b>
+            </p>
+            <p class="modal__prompt modal__prompt--small">
+                На вашу электронную почту направлено письмо с кодом подтверждения.
+                Если вы не получили письмо, проверьте папку «СПАМ».
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__code">
+                    <label class="form__label" for="auth__edit-email-timer">Код из почты</label>
+                    <input class="input-text" id="auth__edit-email-timer" type="text">
+                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                </div>
+            </form>
+        </div>
+        <!-- Состояние "Изменить номер телефона, введите код (с таймером минут)" -->
+        <div class="auth__state auth__edit-email-long-timer">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+                <br>
+                Номер бонусной карты: <span class="auth__new-line auth__card-placeholder"></span>
+                <br>
+                Электронная почта: <b><span class="auth__new-line auth__email-placeholder"></span></b>
+            </p>
+            <p class="modal__prompt modal__prompt--small">
+                На вашу электронную почту направлено письмо с кодом подтверждения.
+                Если вы не получили письмо, проверьте папку «СПАМ».
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__code">
+                    <label class="form__label" for="auth__edit-email-long-timer">Код из почты</label>
+                    <input class="input-text" id="auth__edit-email-long-timer" type="text">
+                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                </div>
+            </form>
+            <a class="auth__link auth__send-status auth__send-status--error">Лимит сообщений исчерпан, попробуйте через <span>30 минут</span></a>
+        </div>
+        <!-- Состояние "Изменить номер телефона, код с почты подтверждён" -->
+        <div class="auth__state auth__edit-email-valid">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+                <br>
+                Номер бонусной карты: <span class="auth__new-line auth__card-placeholder"></span>
+                <br>
+                Электронная почта: <b><span class="auth__new-line auth__email-placeholder"></span></b>
+            </p>
+            <p class="modal__prompt modal__prompt--small">
+                На вашу электронную почту направлено письмо с кодом подтверждения.
+                Если вы не получили письмо, проверьте папку «СПАМ».
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__code">
+                    <label class="form__label" for="auth__edit-email-valid">Код из почты</label>
+                    <input class="input-text input-text--validated" id="auth__edit-email-valid" type="text">
+                </div>
+            </form>
+        </div>
+        <!-- Состояние "Введите новый номер телефона" -->
+        <div class="auth__state auth__edit-phone-new">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+                <br><br>
+                Введите новый номер телефона, который будет привязан к вашей бонусной карте
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__new-phone">
+                    <label class="form__label" for="auth__edit-phone">Новый номер телефона</label>
+                    <input class="input-text" id="auth__edit-phone" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                    <div class="form__error">Этот номер уже привязан к бонусной карте</div>
+                </div>
+            </form>
+        </div>
+        <!-- Состояние "Новый номер телефона подтверждён (но ещё не сменён)" -->
+        <div class="auth__state auth__edit-phone-valid">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+                <br><br>
+                Введите новый номер телефона, который будет привязан к вашей бонусной карте
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__new-phone">
+                    <label class="form__label" for="auth__edit-phone-valid">Новый номер телефона</label>
+                    <input class="input-text input-text--validated" id="auth__edit-phone-valid" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                </div>
+            </form>
+            <button class="button button--large auth__button--large auth__send-sms">
+                <span class="button__content">Получить код в СМС</span>
+            </button>
+            <button class="button auth__button--small auth__send-sms">
+                <span class="button__content">Получить код</span>
+            </button>
+        </div>
+        <!-- Состояние "Введите код для смены номера телефона" -->
+        <div class="auth__state auth__edit-sms">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__new-phone">
+                    <label class="form__label" for="auth__edit-phone-waiting">Новый номер телефона</label>
+                    <input class="input-text input-text--validated" id="auth__edit-phone-waiting" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                </div>
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__sms">Код из СМС</label>
+                    <input class="input-text" id="auth__sms" type="text">
+                </div>
+            </form>
+            <a class="auth__link auth__send-sms">Прислать СМС ещё раз</a>
+        </div>
+        <!-- Состояние "Введите код для смены номера телефона (с таймером секунд)" -->
+        <div class="auth__state auth__edit-sms-timer">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__new-phone">
+                    <label class="form__label" for="auth__edit-phone-timer">Новый номер телефона</label>
+                    <input class="input-text input-text--validated" id="auth__edit-phone-timer" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                </div>
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__edit-sms-timer">Код из СМС</label>
+                    <input class="input-text" id="auth__edit-sms-timer" type="text">
+                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                </div>
+            </form>
+            <a class="auth__link auth__send-status">Прислать СМС ещё раз через <span>40 секунд</span></a>
+        </div>
+        <!-- Состояние "Введите код для смены номера телефона (с таймером минут)" -->
+        <div class="auth__state auth__edit-sms-long-timer">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__new-phone">
+                    <label class="form__label" for="auth__edit-phone-timer-long">Новый номер телефона</label>
+                    <input class="input-text input-text--validated" id="auth__edit-phone-timer-long" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                </div>
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__edit-sms-long-timer">Код из СМС</label>
+                    <input class="input-text" id="auth__edit-sms-long-timer" type="text">
+                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                </div>
+            </form>
+            <a class="auth__link auth__send-status auth__send-status--error">Лимит сообщений исчерпан, попробуйте через <span>30 минут</span></a>
+        </div>
+        <!-- Состояние "СМС для смены номера телефона подтверждена" -->
+        <div class="auth__state auth__edit-sms-valid">
+            <h2 class="modal__title">Изменить номер телефона</h2>
+            <p class="modal__prompt modal__prompt--small">
+                Текущий номер телефона: <span class="auth__new-line auth__phone-placeholder"></span>
+            </p>
+            <form class="form auth__form">
+                <div class="form__item auth__new-phone">
+                    <label class="form__label" for="auth__edit-phone-changed">Новый номер телефона</label>
+                    <input class="input-text input-text--validated" id="auth__edit-phone-changed" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                </div>
+                <div class="form__item auth__sms">
+                    <label class="form__label" for="auth__edit-sms-valid">Код из СМС</label>
+                    <input class="input-text input-text--validated" id="auth__edit-sms-valid" type="text">
+                </div>
+            </form>
+        </div>
+        <!-- Состояние "Номер телефона изменён" -->
+        <div class="auth__state auth__edit-phone-changed">
+            <h2 class="modal__title">Номер телефона изменен!</h2>
+            <div class="auth__changed-phone auth__changed-phone--new"><span class="auth__new-phone-placeholder"></span></div>
+            <div class="auth__changed-phone auth__changed-phone--old"><span class="auth__phone-placeholder"></span></div>
+            <button class="button button--large auth__button--large auth__finish-edit">
+                <span class="button__content">Закрыть</span>
+            </button>
+            <button class="button auth__button--small auth__finish-edit">
+                <span class="button__content">Закрыть</span>
+            </button>
+        </div>
+
+        <div class="modal__close"></div>
+    </div>
+</div>
+<!-- Попап баланса карты и истории операций -->
+<div class="modal card-info">
+    <div class="modal__window card-info__window">
+        <h2 class="modal__title card-info__title card-info__title--bonus">Бонусная карта</h2>
+        <div class="card-info__card">
+            <div class="card-info__number">№ 222221000000706941</div>
+            <div class="card-info__username">Ivanov</div>
+            <div class="card-info__balance">999 999 бонусов</div>
+            <div class="card-info__balance-more">+45,5 скоро будут доступны</div>
+        </div>
+        <div class="card-info__status">Карта активна</div>
+        <a class="link card-info__form-link show-form">Анкета участника бонусной программы</a>
+        <h2 class="modal__title card-info__title">История операций</h2>
+        <div class="table__wrap card-info__history scrollbar-outer">
+            <div class="table table--more-columns">
+                <div class="table__header">
+                    <div class="table__header-row">
+                        <div class="table__header-cell">Дата и время</div>
+                        <div class="table__header-cell">Магазин</div>
+                        <div class="table__header-cell">Тип операции</div>
+                        <div class="table__header-cell">Сумма покупки</div>
+                        <div class="table__header-cell">Бонусы</div>
+                    </div>
+                </div>
+                <div class="table__body">
+                    <div class="table__row">
+                        <div class="table__cell">31.05.18 20:11</div>
+                        <div class="table__cell">Казахстан (KZ)</div>
+                        <div class="table__cell">Сгорание</div>
+                        <div class="table__cell">23456</div>
+                        <div class="table__cell">-500,00</div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__cell">11.05.18 13:52</div>
+                        <div class="table__cell">Казахстан (KZ)</div>
+                        <div class="table__cell">Корректировка</div>
+                        <div class="table__cell">23456</div>
+                        <div class="table__cell">+500,00</div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__cell">31.05.18 20:11</div>
+                        <div class="table__cell">Мария Бераснева</div>
+                        <div class="table__cell">Корректировка</div>
+                        <div class="table__cell">23456</div>
+                        <div class="table__cell">+500,00</div>
+                    </div>
+                    <div class="table__row">
+                        <div class="table__cell">11.05.18 13:52</div>
+                        <div class="table__cell">Артур Галимов</div>
+                        <div class="table__cell">Корректировка</div>
+                        <div class="table__cell">23456</div>
+                        <div class="table__cell">+500,00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="link card-info__full-history">Вся история</a>
+        <div class="modal__close"></div>
+    </div>
+</div>
+<!-- Попап анкеты -->
+<div class="modal user-form">
+    <div class="modal__window user-form__window">
+        <h2 class="modal__title user-form__title">Анкета участника бонусной<br>программы</h2>
+        <div class="form user-form__personal">
+            <div class="form__item user-form__name">
+                <label class="form__label" for="user-form__name">Имя *</label>
+                <input class="input-text" id="user-form__name" type="text" placeholder="Иван" required>
+                <div class="form__error">Обязательное поле</div>
+            </div>
+            <div class="form__item user-form__surname">
+                <label class="form__label" for="user-form__surname">Фамилия</label>
+                <input class="input-text" id="user-form__surname" type="text" placeholder="Иванов">
+                <div class="form__error"></div>
+            </div>
+            <div class="form__item user-form__sex">
+                <div class="form__label">Пол</div>
+                <div class="user-form__sex-group">
+                    <input class="user-form__sex-button user-form__sex-button--male" id="user-form__sex-m" type="radio" name="user-sex">
+                    <label for="user-form__sex-m">Мужской</label>
+                    <input class="user-form__sex-button user-form__sex-button--female" id="user-form__sex-f" type="radio" name="user-sex">
+                    <label for="user-form__sex-f">Женский</label>
+                </div>
+                <div class="form__error"></div>
+            </div>
+            <div class="form__item user-form__birthday">
+                <label class="form__label" for="user-form__birthday">Дата рождения</label>
+                <input class="input-text" id="user-form__birthday" type="text" placeholder="08.09.1947">
+                <div class="form__error"></div>
+            </div>
+            <div class="form__item user-form__phone">
+                <label class="form__label" for="user-form__phone">Мобильный телефон *</label>
+                <input class="input-text" id="user-form__phone" type="tel" placeholder="+7 965 212-44-12" required>
+                <a class="link user-form__edit-phone edit-phone">Изменить</a>
+                <div class="form__error">Обязательное поле</div>
+            </div>
+            <div class="form__item user-form__email">
+                <label class="form__label" for="user-form__email">Электронная почта *</label>
+                <input class="input-text" id="user-form__email" type="email" placeholder="Ivanov@detmir.ru" required>
+                <div class="form__error">На этот адрес уже есть аккаунт</div>
+            </div>
+        </div>
+        <h3 class="modal__subtitle">Информация о детях</h3>
+        <div class="user-form__children">
+            <!-- Блоки с информацией о детях -->
+        </div>
+        <a class="link user-form__add-child">+ Добавить ребенка</a>
+        <h3 class="modal__subtitle">Место жительства</h3>
+        <div class="form user-form__location">
+            <div class="form__item user-form__city">
+                <label class="form__label" for="user-form__city">Населенный пункт</label>
+                <input class="input-text" id="user-form__city" type="text" placeholder="Москва">
+                <div class="form__error"></div>
+            </div>
+            <div class="form__item user-form__street">
+                <label class="form__label" for="user-form__street">Улица</label>
+                <input class="input-text" id="user-form__street" type="text" placeholder="ул. Пушкина">
+                <div class="form__error"></div>
+            </div>
+            <div class="form__item user-form__building">
+                <label class="form__label" for="user-form__building">Дом</label>
+                <input class="input-text" id="user-form__building" type="text" placeholder="23 стр. 5">
+                <div class="form__error"></div>
+            </div>
+        </div>
+        <div class="user-form__sending">
+            <input class="checkbox" id="user-form__email-sending" type="checkbox" checked>
+            <label for="user-form__email-sending">Согласен на e-mail рассылки</label>
+            <input class="checkbox" id="user-form__sms-sending" type="checkbox" checked>
+            <label for="user-form__sms-sending">Согласен на СМС рассылки</label>
+        </div>
+        <button class="button button--large user-form__button--large user-form__save">
+            <span class="button__content">Сохранить</span>
+        </button>
+        <button class="button user-form__button--small user-form__save">
+            <span class="button__content">Сохранить</span>
+        </button>
+        <p class="user-form__terms">
+            Используя карту, вы подтверждаете, что согласны с условиями участия в Бонусной программе «Детмир».
+            <br><br>
+            Настоящим, в рамках Закона Республики Беларусь от 10 ноября 2008 г. N 455-З «Об информации,
+            информатизации и защите информации», сообщив свои персональные данные и подтвердив их через код,
+            полученный на мой мобильный телефон посредством смс-сообщения, я выражаю свободно, своей волей,
+            в своем интересе полное согласие на обработку моих персональных данных, персональных данных моего
+            несовершеннолетнего ребенка оператору базы персональных данных — ООО «Детмир БЕЛ»,
+            место нахождения: 220100, Республика Беларусь, 220100, город Минск, улица Кульман, дом 3, помещение 319,
+            и передачу данных, включая трансграничную, третьим лицам для целей хранения и обработки.
+            Цель обработки персональных данных — предоставление услуг индивидуального сервиса Участнику Бонусной
+            программы, участие в Бонусной программе.
+            <br><br>
+            Способы обработки персональных данных: организация и проведение рекламно-информационных рассылок
+            посредством, включая, но не ограничиваясь: смс-сервисов, электронной почты, почтовой связи,
+            телефонной связи, обработка персональных данных с использованием средств автоматизации и
+            электронно-вычислительной техники, в том числе, путём формирования базы данных.
+            <br><br>
+            Настоящее согласие действует до его отзыва мной. Отзыв согласия на обработку персональных данных
+            должен быть направлен в письменной форме по адресу: 220100, Республика Беларусь, 220100, город Минск,
+            улица Кульман, дом 3, помещение 319.
+        </p>
+        <div>* Обязательные поля для заполнения</div>
+        <div class="modal__close"></div>
+    </div>
+</div>
+<!-- Попап сообщения об успешном сохранении анкеты -->
+<div class="modal form-saved">
+    <div class="modal__window form-saved__window">
+        <h2 class="modal__title form-saved__title">Анкета участника бонусной программы сохранена</h2>
+        <button class="button button--large form-saved__button form-saved__button--large form-saved__to-site">
+            <span class="button__content">На сайт</span>
+        </button>
+        <button class="button form-saved__button form-saved__button--small form-saved__to-site">
+            <span class="button__content">На сайт</span>
+        </button>
+        <a class="link form-saved__to-form">Назад к анкете</a>
+        <div class="modal__close"></div>
+    </div>
+</div>

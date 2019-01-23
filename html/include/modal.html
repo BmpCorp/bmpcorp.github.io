@@ -411,47 +411,56 @@
         </div>
         <div class="card-info__status">Карта активна</div>
         <a class="link card-info__form-link show-form">Анкета участника бонусной программы</a>
-        <h2 class="modal__title card-info__title">История операций</h2>
-        <div class="table__wrap card-info__history scrollbar-outer">
-            <div class="table table--more-columns">
-                <div class="table__header">
-                    <div class="table__header-row">
-                        <div class="table__header-cell">Дата и время</div>
-                        <div class="table__header-cell">Магазин</div>
-                        <div class="table__header-cell">Тип операции</div>
-                        <div class="table__header-cell">Сумма покупки</div>
-                        <div class="table__header-cell">Бонусы</div>
+        <div class="card-info__history">
+            <h2 class="modal__title card-info__title">История операций</h2>
+            <div class="table__wrap scrollbar-external">
+                <div class="table table--more-columns">
+                    <div class="table__header">
+                        <div class="table__header-row">
+                            <div class="table__header-cell">Дата и время</div>
+                            <div class="table__header-cell">Магазин</div>
+                            <div class="table__header-cell">Тип операции</div>
+                            <div class="table__header-cell">Сумма покупки</div>
+                            <div class="table__header-cell">Бонусы</div>
+                        </div>
+                    </div>
+                    <div class="table__body">
+                        <div class="table__row">
+                            <div class="table__cell">31.05.18 20:11</div>
+                            <div class="table__cell">Казахстан (KZ)</div>
+                            <div class="table__cell">Сгорание</div>
+                            <div class="table__cell">23456</div>
+                            <div class="table__cell">-500,00</div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__cell">11.05.18 13:52</div>
+                            <div class="table__cell">Казахстан (KZ)</div>
+                            <div class="table__cell">Корректировка</div>
+                            <div class="table__cell">23456</div>
+                            <div class="table__cell">+500,00</div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__cell">31.05.18 20:11</div>
+                            <div class="table__cell">Мария Бераснева</div>
+                            <div class="table__cell">Корректировка</div>
+                            <div class="table__cell">23456</div>
+                            <div class="table__cell">+500,00</div>
+                        </div>
+                        <div class="table__row">
+                            <div class="table__cell">11.05.18 13:52</div>
+                            <div class="table__cell">Артур Галимов</div>
+                            <div class="table__cell">Корректировка</div>
+                            <div class="table__cell">23456</div>
+                            <div class="table__cell">+500,00</div>
+                        </div>
                     </div>
                 </div>
-                <div class="table__body">
-                    <div class="table__row">
-                        <div class="table__cell">31.05.18 20:11</div>
-                        <div class="table__cell">Казахстан (KZ)</div>
-                        <div class="table__cell">Сгорание</div>
-                        <div class="table__cell">23456</div>
-                        <div class="table__cell">-500,00</div>
-                    </div>
-                    <div class="table__row">
-                        <div class="table__cell">11.05.18 13:52</div>
-                        <div class="table__cell">Казахстан (KZ)</div>
-                        <div class="table__cell">Корректировка</div>
-                        <div class="table__cell">23456</div>
-                        <div class="table__cell">+500,00</div>
-                    </div>
-                    <div class="table__row">
-                        <div class="table__cell">31.05.18 20:11</div>
-                        <div class="table__cell">Мария Бераснева</div>
-                        <div class="table__cell">Корректировка</div>
-                        <div class="table__cell">23456</div>
-                        <div class="table__cell">+500,00</div>
-                    </div>
-                    <div class="table__row">
-                        <div class="table__cell">11.05.18 13:52</div>
-                        <div class="table__cell">Артур Галимов</div>
-                        <div class="table__cell">Корректировка</div>
-                        <div class="table__cell">23456</div>
-                        <div class="table__cell">+500,00</div>
-                    </div>
+            </div>
+            <div class="external-scroll_x card-info__scrollbar">
+                <div class="scroll-element_outer">
+                    <div class="scroll-element_size"></div>
+                    <div class="scroll-element_track"></div>
+                    <div class="scroll-bar"></div>
                 </div>
             </div>
         </div>
@@ -491,7 +500,7 @@
             </div>
             <div class="form__item user-form__phone">
                 <label class="form__label" for="user-form__phone">Мобильный телефон *</label>
-                <input class="input-text" id="user-form__phone" type="tel" placeholder="+7 965 212-44-12" required>
+                <input class="input-text input-text--user-phone" id="user-form__phone" type="tel" placeholder="+7 965 212-44-12" disabled required>
                 <a class="link user-form__edit-phone edit-phone">Изменить</a>
                 <div class="form__error">Обязательное поле</div>
             </div>

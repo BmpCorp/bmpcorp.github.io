@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
     <!-- Сервис Яндекс-карт -->
-    <script src="https://enterprise.api-maps.yandex.ru/2.1/?apikey=8f4503df-15ad-4f89-8be5-48794895f5c9&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://enterprise.api-maps.yandex.ru/2.1/?apikey=8f4503df-15ad-4f89-8be5-48794895f5c9&lang=ru_RU"></script>
 </head>
 <body>
     <div class="page-wrap">
@@ -152,7 +152,7 @@
                     <h2 class="news-widget__title">Новости</h2>
                     <ul class="news-widget__news-list">
                         <li class="news-widget-item">
-                            <img class="news-widget-item__image" src="/assets/img/Placeholders/news-image.jpg">
+                            <img class="news-widget-item__image" alt="" src="/assets/img/Placeholders/news-image.jpg">
                             <h3 class="news-widget-item__date"><time datetime="2018-08-03">3 августа 2018</time></h3>
                             <div class="news-widget-item__description">
                                 Анализ руководством компании финансового состояния и результатов деятельности 6мес 2018
@@ -160,7 +160,7 @@
                             <a class="link news-widget-item__link" href="#">Читать дальше...</a>
                         </li>
                         <li class="news-widget-item">
-                            <img class="news-widget-item__image" src="/assets/img/Placeholders/news-image.jpg">
+                            <img class="news-widget-item__image" alt="" src="/assets/img/Placeholders/news-image.jpg">
                             <h3 class="news-widget-item__date"><time datetime="2018-07-14">14 июля 2018</time></h3>
                             <div class="news-widget-item__description">
                                 Правила и вопросы и ответы возвратных карт, правила и вопросы и ответы для корпоративных клиентов
@@ -173,7 +173,7 @@
                     <a class="link news-widget__show-all" href="/html/news.html">Все новости...</a>
                 </div>
                 <!-- Блок акций -->
-                <a class="offer-widget" href="#">
+                <div class="offer-widget" onclick="window.location = '/html/offers.html'">
                     <h2 class="offer-widget__title">Акции</h2>
                     <div class="offer-widget__subtitle">Актуальные акции и предложения</div>
                     <button class="button button--large offer-widget__button offer-widget__button--large">
@@ -182,7 +182,7 @@
                     <button class="button button--short offer-widget__button offer-widget__button--small">
                         <span class="button__content">Смотреть PDF</span>
                     </button>
-                </a>
+                </div>
             </section>
             <!-- Блок "Ассортимент магазинов" -->
             <section class="assortment">

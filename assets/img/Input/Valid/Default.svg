@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Notification / Success / Icon / 2XS / Default</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="26" cy="10" r="10"></circle>
+        <path d="M2.61045,3.96 C2.15895,3.507 1.44645,3.45975 0.93945,3.849 C0.8202,3.93975 0.7002,4.04775 0.5832,4.1775 C0.3987,4.37925 0.2652,4.5645 0.1692,4.72875 C-0.07905,5.1435 -0.04605,5.6595 0.21795,6.06375 C0.55095,6.57075 0.91995,7.05825 1.69545,7.8735 C2.6397,8.86425 3.25695,9.438 3.84045,9.87225 C4.4907,10.35525 5.3682,10.35525 6.0177,9.87225 C6.6012,9.438 7.3992,8.772 8.3592,7.79475 C9.7152,6.4155 11.4822,4.485 11.8152,3.97725 C12.07995,3.573 12.11145,3.05775 11.8647,2.643 C11.76795,2.478 11.6352,2.29275 11.4507,2.09175 C11.3337,1.96125 11.21295,1.854 11.0952,1.76325 C10.58745,1.374 9.87495,1.4205 9.4227,1.87425 L4.9287,6.39075 L2.61045,3.96 Z" id="path-3"></path>
+    </defs>
+    <g id="Belarus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Corp_BelMir_000_UI_illustration" transform="translate(-134.000000, -251.000000)">
+            <g id="Notification-/-Success-/-Icon-/-2XS-/-Default" transform="translate(118.000000, 251.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Container" fill="#06C92E" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <g id="Icon-/-Check" mask="url(#mask-2)">
+                    <g transform="translate(20.000000, 4.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <use id="Fill-1" stroke="none" fill="#3183E2" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        <g id="Color-/-1.-Base-/-Base-Light-5" stroke="none" fill="none" mask="url(#mask-4)" fill-rule="evenodd">
+                            <rect id="Fill" fill="#FFFFFF" x="0" y="0" width="12" height="12"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

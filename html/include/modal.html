@@ -108,10 +108,10 @@
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__login-sms">Код из СМС</label>
                     <input class="input-text" id="auth__login-sms" type="text">
-                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                    <div class="form__error">Неверный код, попробуйте еще раз</div>
                 </div>
             </form>
-            <a class="auth__link auth__send-sms">Прислать СМС ещё раз</a>
+            <a class="auth__link auth__send-sms">Прислать СМС еще раз</a>
         </div>
         <!-- Состояние "СМС отправлена, введите код (с таймером секунд)" -->
         <div class="auth__state auth__login-sms-timer">
@@ -121,10 +121,10 @@
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__login-sms-timer">Код из СМС</label>
                     <input class="input-text" id="auth__login-sms-timer" type="text">
-                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                    <div class="form__error">Неверный код, попробуйте еще раз</div>
                 </div>
             </form>
-            <a class="auth__link auth__send-status">Прислать СМС ещё раз через <span>40 секунд</span></a>
+            <a class="auth__link auth__send-status">Прислать СМС еще раз через <span>40 секунд</span></a>
         </div>
         <!-- Состояние "СМС отправлена, введите код (с таймером минут)" -->
         <div class="auth__state auth__login-sms-long-timer">
@@ -134,7 +134,7 @@
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__login-sms-long-timer">Код из СМС</label>
                     <input class="input-text" id="auth__login-sms-long-timer" type="text">
-                    <div class="form__error">Неверный код, попробуйте ещё раз</div>
+                    <div class="form__error">Неверный код, попробуйте еще раз</div>
                 </div>
             </form>
             <a class="auth__link auth__send-status auth__send-status--error">Лимит СМС исчерпан, попробуйте через <span>30 минут</span></a>
@@ -146,7 +146,7 @@
             <form class="form auth__form">
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__login-sms-valid">Код из СМС</label>
-                    <input class="input-text input-text--validated" id="auth__login-sms-valid" type="text">
+                    <input class="input-text input-text--validated" id="auth__login-sms-valid" type="text" readonly>
                 </div>
             </form>
         </div>
@@ -269,7 +269,7 @@
             <form class="form auth__form">
                 <div class="form__item auth__code">
                     <label class="form__label" for="auth__edit-email-valid">Код из почты</label>
-                    <input class="input-text input-text--validated" id="auth__edit-email-valid" type="text">
+                    <input class="input-text input-text--validated" id="auth__edit-email-valid" type="text" readonly>
                 </div>
             </form>
         </div>
@@ -300,7 +300,7 @@
             <form class="form auth__form">
                 <div class="form__item auth__new-phone">
                     <label class="form__label" for="auth__edit-phone-valid">Новый номер телефона</label>
-                    <input class="input-text input-text--validated" id="auth__edit-phone-valid" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                    <input class="input-text input-text--validated" id="auth__edit-phone-valid" type="tel">
                 </div>
             </form>
             <button class="button button--large auth__button--large auth__send-sms">
@@ -319,7 +319,7 @@
             <form class="form auth__form">
                 <div class="form__item auth__new-phone">
                     <label class="form__label" for="auth__edit-phone-waiting">Новый номер телефона</label>
-                    <input class="input-text input-text--validated" id="auth__edit-phone-waiting" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                    <input class="input-text input-text--validated" id="auth__edit-phone-waiting" type="tel">
                 </div>
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__sms">Код из СМС</label>
@@ -337,7 +337,7 @@
             <form class="form auth__form">
                 <div class="form__item auth__new-phone">
                     <label class="form__label" for="auth__edit-phone-timer">Новый номер телефона</label>
-                    <input class="input-text input-text--validated" id="auth__edit-phone-timer" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                    <input class="input-text input-text--validated" id="auth__edit-phone-timer" type="tel">
                 </div>
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__edit-sms-timer">Код из СМС</label>
@@ -356,7 +356,7 @@
             <form class="form auth__form">
                 <div class="form__item auth__new-phone">
                     <label class="form__label" for="auth__edit-phone-timer-long">Новый номер телефона</label>
-                    <input class="input-text input-text--validated" id="auth__edit-phone-timer-long" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                    <input class="input-text input-text--validated" id="auth__edit-phone-timer-long" type="tel">
                 </div>
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__edit-sms-long-timer">Код из СМС</label>
@@ -375,11 +375,11 @@
             <form class="form auth__form">
                 <div class="form__item auth__new-phone">
                     <label class="form__label" for="auth__edit-phone-changed">Новый номер телефона</label>
-                    <input class="input-text input-text--validated" id="auth__edit-phone-changed" type="tel" placeholder="+375-ХХ-ХХХ-ХХ-ХХ">
+                    <input class="input-text input-text--validated" id="auth__edit-phone-changed" type="tel" readonly>
                 </div>
                 <div class="form__item auth__sms">
                     <label class="form__label" for="auth__edit-sms-valid">Код из СМС</label>
-                    <input class="input-text input-text--validated" id="auth__edit-sms-valid" type="text">
+                    <input class="input-text input-text--validated" id="auth__edit-sms-valid" type="text" readonly>
                 </div>
             </form>
         </div>
@@ -495,18 +495,18 @@
             </div>
             <div class="form__item user-form__birthday">
                 <label class="form__label" for="user-form__birthday">Дата рождения</label>
-                <input class="input-text" id="user-form__birthday" type="text" placeholder="08.09.1947">
+                <input class="input-text" id="user-form__birthday" type="text" placeholder="08.09.1982">
                 <div class="form__error"></div>
             </div>
             <div class="form__item user-form__phone">
                 <label class="form__label" for="user-form__phone">Мобильный телефон *</label>
-                <input class="input-text input-text--user-phone" id="user-form__phone" type="tel" placeholder="+7 965 212-44-12" disabled required>
+                <input class="input-text input-text--user-phone" id="user-form__phone" type="tel" disabled required>
                 <a class="link user-form__edit-phone edit-phone">Изменить</a>
                 <div class="form__error">Обязательное поле</div>
             </div>
             <div class="form__item user-form__email">
                 <label class="form__label" for="user-form__email">Электронная почта *</label>
-                <input class="input-text" id="user-form__email" type="email" placeholder="Ivanov@detmir.ru" required>
+                <input class="input-text" id="user-form__email" type="email" placeholder="Ivanov@detmir.by" required>
                 <div class="form__error">На этот адрес уже есть аккаунт</div>
             </div>
         </div>
@@ -519,17 +519,17 @@
         <div class="form user-form__location">
             <div class="form__item user-form__city">
                 <label class="form__label" for="user-form__city">Населенный пункт</label>
-                <input class="input-text" id="user-form__city" type="text" placeholder="Москва">
+                <input class="input-text" id="user-form__city" type="text" placeholder="Минск">
                 <div class="form__error"></div>
             </div>
             <div class="form__item user-form__street">
                 <label class="form__label" for="user-form__street">Улица</label>
-                <input class="input-text" id="user-form__street" type="text" placeholder="ул. Пушкина">
+                <input class="input-text" id="user-form__street" type="text" placeholder="Партизанский проспект">
                 <div class="form__error"></div>
             </div>
             <div class="form__item user-form__building">
                 <label class="form__label" for="user-form__building">Дом</label>
-                <input class="input-text" id="user-form__building" type="text" placeholder="23 стр. 5">
+                <input class="input-text" id="user-form__building" type="text" placeholder="20 корп. 1">
                 <div class="form__error"></div>
             </div>
         </div>

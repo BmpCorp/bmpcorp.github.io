@@ -9,248 +9,251 @@
     <script src="https://enterprise.api-maps.yandex.ru/2.1/?apikey=8f4503df-15ad-4f89-8be5-48794895f5c9&lang=ru_RU"></script>
 </head>
 <body>
-    <div class="page-wrap">
-        <!-- Боковой блок с логотипом и навигацией -->
-        <aside class="include" id="nav"></aside>
-        <!-- Основное содержимое главной страницы (включая футер) -->
-        <div class="index-content">
-            <!-- Личный кабинет -->
-            <section class="include" id="cabinet"></section>
-            <!-- Слайдер с баннерами -->
-            <section class="banners">
-                <div class="swiper-container banners__slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="banner" style="background-color: #00CD52;">
-                                <p>
-                                    <strong class="banner__text--strong">Более 600</strong> магазинов в
-                                    <br>
-                                    России и Казахстане.
-                                    <br>
-                                    Общая площадь
-                                    <br>
-                                    магазинов <strong class="banner__text--strong">700 000</strong>
-                                    <br>
-                                    квадратных метров
-                                </p>
+    <div class="fixed-container">
+        <div class="page-wrap">
+            <!-- Боковой блок с логотипом и навигацией -->
+            <aside class="include" id="nav"></aside>
+            <!-- Основное содержимое главной страницы (включая футер) -->
+            <div class="index-content">
+                <!-- Личный кабинет -->
+                <section class="include" id="cabinet"></section>
+                <!-- Слайдер с баннерами -->
+                <section class="banners">
+                    <div class="swiper-container banners__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="banner" style="background-color: #00CD52;">
+                                    <p>
+                                        <strong class="banner__text--strong">Более 600</strong> магазинов в
+                                        <br>
+                                        России и Казахстане.
+                                        <br>
+                                        Общая площадь
+                                        <br>
+                                        магазинов <strong class="banner__text--strong">700 000</strong>
+                                        <br>
+                                        квадратных метров
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner" style="background-color: #00C2FC;">
+                                    <p>
+                                        <strong class="banner__text--strong">Более 700</strong> магазинов в
+                                        <br>
+                                        России и Казахстане.
+                                        <br>
+                                        Общая площадь
+                                        <br>
+                                        магазинов <strong class="banner__text--strong">750 000</strong>
+                                        <br>
+                                        квадратных метров
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="banner" style="background-color: #FF3744;">
+                                    <p>
+                                        <strong class="banner__text--strong">Более 800</strong> магазинов в
+                                        <br>
+                                        России и Казахстане.
+                                        <br>
+                                        Общая площадь
+                                        <br>
+                                        магазинов <strong class="banner__text--strong">800 000</strong>
+                                        <br>
+                                        квадратных метров
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="banner" style="background-color: #00C2FC;">
-                                <p>
-                                    <strong class="banner__text--strong">Более 700</strong> магазинов в
-                                    <br>
-                                    России и Казахстане.
-                                    <br>
-                                    Общая площадь
-                                    <br>
-                                    магазинов <strong class="banner__text--strong">750 000</strong>
-                                    <br>
-                                    квадратных метров
-                                </p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="banner" style="background-color: #FF3744;">
-                                <p>
-                                    <strong class="banner__text--strong">Более 800</strong> магазинов в
-                                    <br>
-                                    России и Казахстане.
-                                    <br>
-                                    Общая площадь
-                                    <br>
-                                    магазинов <strong class="banner__text--strong">800 000</strong>
-                                    <br>
-                                    квадратных метров
-                                </p>
-                            </div>
-                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </section>
-            <!-- Блок "Адреса магазинов" -->
-            <section class="shops-widget">
-                <h2 class="shops-widget-title">
-                    <a class="shops-widget-title__link" href="/html/shops.html">Адреса магазинов</a>
-                    <span class="shops-widget-title__non-interactive">Адреса магазинов</span>
-                </h2>
-                <ul class="shops-widget__city-list">
-                    <!-- Список городов -->
-                    <li class="shops-widget__city-list-prefix">Загрузка...</li>
-                </ul>
-                <div class="shops-widget__shops-wrap scrollbar-outer">
-                    <!-- Список магазинов по городам -->
-                </div>
-                <div class="shops-widget__map" id="shops-widget__map">
-                    <!-- Карта -->
-                </div>
-                <a class="link shops-widget__show-all" href="/html/shops.html">Все магазины списком ...</a>
-            </section>
-            <!-- Блок с бонусными и подарочными картами -->
-            <section class="index-content-block index-content-block--cards">
-                <!-- Блок с информацией о бонусных картах -->
-                <div class="card-widget card-widget--bonus">
-                    <h2 class="card-widget__title">Бонусные карты</h2>
-                    <p class="card-widget__description">
-                        До <strong class="card-widget__text--strong">100%</strong> покупки оплачивайте бонусами
-                        <br>
-                        До <strong class="card-widget__text--strong">5%</strong> бонусами за каждую покупку
-                    </p>
-                    <a class="button button--large button--desktop" href="/html/bonus-cards.html">
-                        <span class="button__content">О бонусной карте</span>
-                    </a>
-                    <a class="button button--short button--adaptive" href="/html/bonus-cards.html">
-                        <span class="button__content">О карте</span>
-                    </a>
-                    <ul class="link-list">
-                        <li>
-                            <a href="#">Как получить карту</a>
+                </section>
+                <!-- Блок "Адреса магазинов" -->
+                <section class="shops-widget">
+                    <h2 class="shops-widget-title">
+                        <a class="shops-widget-title__link" href="/html/shops.html">Адреса магазинов</a>
+                        <span class="shops-widget-title__non-interactive">Адреса магазинов</span>
+                    </h2>
+                    <ul class="shops-widget__city-list">
+                        <!-- Список городов -->
+                        <li class="shops-widget__city-list-prefix">Загрузка...</li>
+                    </ul>
+                    <div class="shops-widget__shops-wrap scrollbar-outer">
+                        <!-- Список магазинов по городам -->
+                    </div>
+                    <div class="shops-widget__map" id="shops-widget__map">
+                        <!-- Карта -->
+                    </div>
+                    <a class="link shops-widget__show-all" href="/html/shops.html">Все магазины списком ...</a>
+                </section>
+                <!-- Блок с бонусными и подарочными картами -->
+                <section class="index-content-block index-content-block--cards">
+                    <!-- Блок с информацией о бонусных картах -->
+                    <div class="card-widget card-widget--bonus">
+                        <h2 class="card-widget__title">Бонусные карты</h2>
+                        <p class="card-widget__description">
+                            До <strong class="card-widget__text--strong">100%</strong> покупки оплачивайте бонусами
+                            <br>
+                            До <strong class="card-widget__text--strong">5%</strong> бонусами за каждую покупку
+                        </p>
+                        <a class="button button--large button--desktop" href="/html/bonus-cards.html">
+                            <span class="button__content">О бонусной карте</span>
+                        </a>
+                        <a class="button button--short button--adaptive" href="/html/bonus-cards.html">
+                            <span class="button__content">О карте</span>
+                        </a>
+                        <ul class="link-list">
+                            <li>
+                                <a href="#">Как получить карту</a>
+                            </li>
+                            <li>
+                                <a href="#">Вопросы и ответы</a>
+                            </li>
+                            <li>
+                                <a href="#">Правила</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Блок с информацией о подарочных картах -->
+                    <div class="card-widget card-widget--gift">
+                        <h2 class="card-widget__title">Подарочные карты</h2>
+                        <p class="card-widget__description">
+                            Мы предлагаем большое разнообразие подарочных карт с фиксированным номиналом:
+                            <strong class="card-widget__text--strong">10</strong>,
+                            <strong class="card-widget__text--strong">20</strong>,
+                            <strong class="card-widget__text--strong">30</strong>,
+                            <strong class="card-widget__text--strong">50</strong>,
+                            <strong class="card-widget__text--strong">100</strong>
+                            белорусских рублей, а также подарочные карты гибкого номинала.
+                        </p>
+                        <a class="button button--large button--desktop" href="/html/gift-cards.html">
+                            <span class="button__content">Узнать больше</span>
+                        </a>
+                        <a class="button button--short button--adaptive" href="/html/gift-cards.html">
+                            <span class="button__content">Подробнее</span>
+                        </a>
+                        <ul class="link-list">
+                            <li>
+                                <a href="#">Проверить баланс</a>
+                            </li>
+                            <li>
+                                <a href="#">Правила</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Блок с виджетами "Новости" и "Акции" -->
+                <section class="index-content-block index-content-block--news-and-offers">
+                    <!-- Блок новостей -->
+                    <div class="news-widget">
+                        <h2 class="news-widget__title">Новости</h2>
+                        <ul class="news-widget__news-list">
+                            <li class="news-widget-item">
+                                <img class="news-widget-item__image" alt="" src="/assets/img/Placeholders/news-image.jpg">
+                                <h3 class="news-widget-item__date"><time datetime="2018-08-03">3 августа 2018</time></h3>
+                                <div class="news-widget-item__description">
+                                    Анализ руководством компании финансового состояния и результатов деятельности 6мес 2018
+                                </div>
+                                <a class="link news-widget-item__link" href="#">Читать дальше...</a>
+                            </li>
+                            <li class="news-widget-item">
+                                <img class="news-widget-item__image" alt="" src="/assets/img/Placeholders/news-image.jpg">
+                                <h3 class="news-widget-item__date"><time datetime="2018-07-14">14 июля 2018</time></h3>
+                                <div class="news-widget-item__description">
+                                    Правила и вопросы и ответы возвратных карт, правила и вопросы и ответы для корпоративных клиентов
+                                    <br>
+                                    баланс на подарочной карте
+                                </div>
+                                <a class="link news-widget-item__link" href="#">Читать дальше...</a>
+                            </li>
+                        </ul>
+                        <a class="link news-widget__show-all" href="/html/news.html">Все новости...</a>
+                    </div>
+                    <!-- Блок акций -->
+                    <div class="offer-widget" onclick="window.location = '/html/offers.html'">
+                        <h2 class="offer-widget__title">Акции</h2>
+                        <div class="offer-widget__subtitle">Актуальные акции и предложения</div>
+                        <button class="button button--large offer-widget__button offer-widget__button--large">
+                            <span class="button__content">Смотреть PDF</span>
+                        </button>
+                        <button class="button button--short offer-widget__button offer-widget__button--small">
+                            <span class="button__content">Смотреть PDF</span>
+                        </button>
+                    </div>
+                </section>
+                <!-- Блок "Ассортимент магазинов" -->
+                <section class="assortment">
+                    <h2 class="assortment__title">Ассортимент магазинов</h2>
+                    <ul class="assortment__categories">
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Детские игрушки и игры</h3>
                         </li>
-                        <li>
-                            <a href="#">Вопросы и ответы</a>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Гигиена и уход</h3>
                         </li>
-                        <li>
-                            <a href="#">Правила</a>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Детская комната</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Спорт и отдых</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Питание и кормление</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Подгузники и пеленки</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Товары для мамы</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Хобби и творчество</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Одежда и обувь</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Товары для школы</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Книги для детей</h3>
+                        </li>
+                        <li class="assortment-category">
+                            <h3 class="assortment-category__title">Прогулки и путешествия</h3>
                         </li>
                     </ul>
-                </div>
-                <!-- Блок с информацией о подарочных картах -->
-                <div class="card-widget card-widget--gift">
-                    <h2 class="card-widget__title">Подарочные карты</h2>
-                    <p class="card-widget__description">
-                        Мы предлагаем большое разнообразие подарочных карт с фиксированным номиналом:
-                        <strong class="card-widget__text--strong">10</strong>,
-                        <strong class="card-widget__text--strong">20</strong>,
-                        <strong class="card-widget__text--strong">30</strong>,
-                        <strong class="card-widget__text--strong">50</strong>,
-                        <strong class="card-widget__text--strong">100</strong>
-                        белорусских рублей, а также подарочные карты гибкого номинала.
-                    </p>
-                    <a class="button button--large button--desktop" href="/html/gift-cards.html">
-                        <span class="button__content">Узнать больше</span>
-                    </a>
-                    <a class="button button--short button--adaptive" href="/html/gift-cards.html">
-                        <span class="button__content">Подробнее</span>
-                    </a>
-                    <ul class="link-list">
-                        <li>
-                            <a href="#">Проверить баланс</a>
-                        </li>
-                        <li>
-                            <a href="#">Правила</a>
-                        </li>
+                </section>
+                <!-- Блок "Бренды" -->
+                <section class="brands">
+                    <h2 class="brands__title">Бренды</h2>
+                    <ul class="brands__list">
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
+                        <li class="brand"></li>
                     </ul>
-                </div>
-            </section>
-            <!-- Блок с виджетами "Новости" и "Акции" -->
-            <section class="index-content-block index-content-block--news-and-offers">
-                <!-- Блок новостей -->
-                <div class="news-widget">
-                    <h2 class="news-widget__title">Новости</h2>
-                    <ul class="news-widget__news-list">
-                        <li class="news-widget-item">
-                            <img class="news-widget-item__image" alt="" src="/assets/img/Placeholders/news-image.jpg">
-                            <h3 class="news-widget-item__date"><time datetime="2018-08-03">3 августа 2018</time></h3>
-                            <div class="news-widget-item__description">
-                                Анализ руководством компании финансового состояния и результатов деятельности 6мес 2018
-                            </div>
-                            <a class="link news-widget-item__link" href="#">Читать дальше...</a>
-                        </li>
-                        <li class="news-widget-item">
-                            <img class="news-widget-item__image" alt="" src="/assets/img/Placeholders/news-image.jpg">
-                            <h3 class="news-widget-item__date"><time datetime="2018-07-14">14 июля 2018</time></h3>
-                            <div class="news-widget-item__description">
-                                Правила и вопросы и ответы возвратных карт, правила и вопросы и ответы для корпоративных клиентов
-                                <br>
-                                баланс на подарочной карте
-                            </div>
-                            <a class="link news-widget-item__link" href="#">Читать дальше...</a>
-                        </li>
-                    </ul>
-                    <a class="link news-widget__show-all" href="/html/news.html">Все новости...</a>
-                </div>
-                <!-- Блок акций -->
-                <div class="offer-widget" onclick="window.location = '/html/offers.html'">
-                    <h2 class="offer-widget__title">Акции</h2>
-                    <div class="offer-widget__subtitle">Актуальные акции и предложения</div>
-                    <button class="button button--large offer-widget__button offer-widget__button--large">
-                        <span class="button__content">Смотреть PDF</span>
-                    </button>
-                    <button class="button button--short offer-widget__button offer-widget__button--small">
-                        <span class="button__content">Смотреть PDF</span>
-                    </button>
-                </div>
-            </section>
-            <!-- Блок "Ассортимент магазинов" -->
-            <section class="assortment">
-                <h2 class="assortment__title">Ассортимент магазинов</h2>
-                <ul class="assortment__categories">
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Детские игрушки и игры</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Гигиена и уход</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Детская комната</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Спорт и отдых</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Питание и кормление</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Подгузники и пеленки</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Товары для мамы</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Хобби и творчество</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Одежда и обувь</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Товары для школы</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Книги для детей</h3>
-                    </li>
-                    <li class="assortment-category">
-                        <h3 class="assortment-category__title">Прогулки и путешествия</h3>
-                    </li>
-                </ul>
-            </section>
-            <!-- Блок "Бренды" -->
-            <section class="brands">
-                <h2 class="brands__title">Бренды</h2>
-                <ul class="brands__list">
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                    <li class="brand"></li>
-                </ul>
-                <div class="brands__count">Более 125 брендов</div>
-            </section>
-            <!-- Футер -->
-            <footer class="include" id="footer"></footer>
+                    <div class="brands__count">Более 125 брендов</div>
+                </section>
+                <!-- Футер -->
+                <footer class="include" id="footer"></footer>
+            </div>
         </div>
     </div>
+
     <!-- Модальные окна -->
     <div class="include" id="modal"></div>
     <script src="/assets/js/bundle.js"></script>

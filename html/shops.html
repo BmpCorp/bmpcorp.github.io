@@ -9,32 +9,34 @@
     <script src="https://enterprise.api-maps.yandex.ru/2.1/?apikey=8f4503df-15ad-4f89-8be5-48794895f5c9&lang=ru_RU"></script>
 </head>
 <body>
-    <div class="page-wrap">
-        <!-- Боковой блок с логотипом и навигацией -->
-        <aside class="include" id="nav"></aside>
-        <!-- Контентая область (включая футер) -->
-        <div class="page-content">
-            <!-- Основное содержимое -->
-            <div class="content shops-content">
-                <h1 class="content__title">Адреса магазинов</h1>
-                <ul class="shops-content__city-list">
-                    <!-- Список городов -->
-                    <li class="shops-content__city-list-prefix">Загрузка...</li>
-                </ul>
-                <div class="shops-content__map" id="shops-content__map">
-                    <!-- Карта -->
+    <div class="fixed-container">
+        <div class="page-wrap">
+            <!-- Боковой блок с логотипом и навигацией -->
+            <aside class="include" id="nav"></aside>
+            <!-- Контентая область (включая футер) -->
+            <div class="page-content">
+                <!-- Основное содержимое -->
+                <div class="content shops-content">
+                    <h1 class="content__title">Адреса магазинов</h1>
+                    <ul class="shops-content__city-list">
+                        <!-- Список городов -->
+                        <li class="shops-content__city-list-prefix">Загрузка...</li>
+                    </ul>
+                    <div class="shops-content__map" id="shops-content__map">
+                        <!-- Карта -->
+                    </div>
+                    <div class="shops-content__shops-wrap">
+                        <!-- Список магазинов по городам -->
+                    </div>
                 </div>
-                <div class="shops-content__shops-wrap">
-                    <!-- Список магазинов по городам -->
-                </div>
+                <!-- Личный кабинет для малых экранов -->
+                <section class="include" id="cabinet"></section>
+                <!-- Футер -->
+                <footer class="include" id="footer"></footer>
             </div>
-            <!-- Личный кабинет для малых экранов -->
-            <section class="include" id="cabinet"></section>
-            <!-- Футер -->
-            <footer class="include" id="footer"></footer>
+            <!-- Личный кабинет для больших экранов -->
+            <aside class="include" id="cabinet-aside"></aside>
         </div>
-        <!-- Личный кабинет для больших экранов -->
-        <aside class="include" id="cabinet-aside"></aside>
     </div>
     <!-- Модальные окна -->
     <div class="include" id="modal"></div>
